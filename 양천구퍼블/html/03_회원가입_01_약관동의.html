@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <div class="wrap">
+
+        <!--상단영역-->
+        <header>
+            <div class="business_info">
+                <span class="mark">양천구</span>
+                <span  class="business_name">구립목2동 용왕경로당</span>
+                <span  class="time">2023.07.24 10:56</span>
+            </div>
+            <div class="private_info">
+                <!--로그인 시 노출-->
+                <!-- <span class="name">홍*동님</span>
+                <button class="btn_logout btn_basic">로그아웃</button> -->
+                <a href="" class="btn_setting">태블릿 세팅</a>
+            </div>
+        </header>
+        <!--//상단영역-->
+
+        <!--컨텐츠영역-->
+        <div class="contents_wrap join">
+            <!--타이틀영역-->
+            <section class="title">
+                <button class="btn_gomain btn_basic">처음으로</button>
+                <h1>회원가입</h1>
+            </section>
+            <!--//타이틀영역-->
+
+            <div class="contents">
+                <section class="join_wrap join_step01">
+                    <div class="step">
+                        <ol>
+                            <li class="act"><strong>1</strong>약관동의</li>
+                            <li><strong>2</strong>휴대폰번호 입력</li>
+                            <li><strong>3</strong>이름입력</li>
+                            <li><strong>4</strong>생년월일/성별 입력</li>
+                        </ol>
+                    </div>  
+                    <div class="terms">
+                        <div class="agree_all">
+                            <p>서비스 이용을 위해 약관을 확인 후 동의 해주세요.</p>
+                            <div class="input_group"><input type="checkbox" id="agree01"><label for="agree01"><span>전체동의</span></label></div>
+                        </div>
+                        <div class="terms_type_list">
+                            <div class="terms_type act"><!--동의체크 시-->
+                                <div class="input_group"><input type="checkbox" id="agree02" checked><label for="agree02"><span>동의함</span></label></div>
+                                <p>[필수] 이용약관</p>
+                                <button class="terms_view btn_basic">약관보기</button>
+                            </div>
+                            <div class="terms_type">
+                                <div class="input_group"><input type="checkbox" id="agree03"><label for="agree03"><span>동의함</span></label></div>
+                                <p>[필수] 개인정보 수집이용 동의</p>
+                                <button class="terms_view btn_basic">약관보기</button>
+                            </div>
+                            <div class="terms_type">
+                                <div class="input_group"><input type="checkbox" id="agree04"><label for="agree04"><span>동의함</span></label></div>
+                                <p>[선택] 제3자 개인정보 제공 동의</p>
+                                <button class="terms_view btn_basic">약관보기</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="btn_wrap">
+                    <button class="btn_cancle btn_basic">취소</button>
+                    <button class="btn_next btn_basic">다음</button>
+                </section>
+            </div><!--//cotents-->
+        </div><!--//contents_wrap-->
+        <!--//컨텐츠영역-->
+
+    </div><!--//wrap-->
+</body>
+</html>

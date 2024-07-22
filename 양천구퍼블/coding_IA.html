@@ -1,0 +1,1095 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>스마트경로당 Coding Page</title>
+
+<style>
+/*common*/
+html,body{width: 100%; height: 100%;}
+html{overflow-y: scroll;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,p,button{margin: 0; padding: 0;}
+body,h1,h2,h3,h4,input,textarea,button,select,option{font-family: Malgun Gothic, '맑은고딕','돋움',dotum,Helvetica,sans-serif; font-size: 12px; color: #444;}
+img,fieldset{border: 0;}
+li{list-style: none;}
+input,select,button{vertical-align: middle;}
+img{vertical-align: top;}
+em,address{font-style: italic; font-weight: bold;}
+a{color: #666; text-decoration: none;}
+a:hover, a:focus{color: #222; text-decoration: underline;}
+table{border-collapse: collapse;}
+/*테이블 스타일*/
+.table_wrap{padding: 0px 30px 30px 10px;box-sizing: border-box;}
+table {border: 3px solid #999;padding: 0px;width: 100%;line-height:20px;box-sizing: border-box;}
+table thead th {padding: 6px 10px;color: #4a4a4a;font-weight: bold;background: #eee;text-align: center;border-bottom: 1px solid #999;}
+table thead th a {color: #4a4a4a;}
+table tbody th {font-weight: normal;background: #fafafa;color: #4a4a4a;letter-spacing: -1px;background: #f7f7f7;}
+table th, table td {padding: 6px 10px;border-bottom: 1px solid #ddd;border-right: 1px solid #ddd;text-align: left;}
+table th.color, table td.color {padding: 6px 10px;border-bottom: 1px solid #3a7db0;border-right: 1px solid #ddd;text-align: left;}
+table td.Bred {color: #F00;font-weight: bold;text-align: center;}
+table td.Bgreen {color: #1508cb;font-weight: bold;text-align: center;}
+/*탭메뉴*/
+.tab{width:98%;margin:30px 10px 10px;padding:0;border-bottom:1px solid #999;}
+.tab ul li{color:#fff;font-size:18px;font-weight:bold;width:20%;float:left;text-align:center;height:45px;line-height: 45px;border-top-left-radius: 7px;border-top-right-radius: 7px;margin-right:1px;background: #e9e9e9;padding:0 10px;}
+.tab ul li a{color: #777;font-weight: bold;font-size:1.0em;display: block;text-decoration: none;text-transform: uppercase;}
+.tab ul li.act{background:#60b3f4;height:45px;border-top:1px solid #3a7db0;border-right:1px solid #3a7db0;border-left:1px solid #3a7db0;}
+.tab ul li.act a{color:#fff;}
+.tab:after{content:"";display:block;clear:both;}
+h1{padding-left: 10px;}
+</style>
+
+</head>
+
+<body>
+	<div class="tab">
+		<ul>
+			<li class="act">양천구 스마트경로당</li>
+		</ul>
+	</div>
+
+	<div class="table_wrap">
+		<table>	
+			<colgroup>
+				<col width="18%" />
+				<col width="18%" />
+				<col width="18%" />
+				<col width="" />
+				<col width="5%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th class="depth_1">1depth</th>
+					<th class="depth_2">2depth</th>
+					<th class="depth_3">3depth</th>
+					<th style="width: auto;">파일명</th>
+					<th  class="etc">기타</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>
+						<strong>00_서버연동</strong>
+					</th>
+					<th>
+						01_비밀번호 설정
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/00_서버연동_01_비밀번호설정.html" target="_blank">00_서버연동_01_비밀번호설정.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						01_비밀번호 설정 팝업
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/00_서버연동_01_비밀번호설정_팝업.html" target="_blank">00_서버연동_01_비밀번호설정_팝업.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						02_장비ID 입력
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/00_서버연동_02_장비ID입력.html" target="_blank">00_서버연동_02_장비ID입력.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						02_장비ID 입력 팝업
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/00_서버연동_02_장비ID입력_팝업.html" target="_blank">00_서버연동_02_장비ID입력_팝업.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						03_경로당 선택
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/00_서버연동_03_경로당선택.html" target="_blank">00_서버연동_03_경로당선택.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th class="color">
+						<strong>&nbsp;</strong>
+					</th>
+					<th class="color">
+						03_경로당 선택 팝업
+					</th>
+					<th class="color">
+						&nbsp;
+					</th>
+					<td class="color">
+						<a href="html/00_서버연동_03_경로당선택_팝업.html" target="_blank">00_서버연동_03_경로당선택_팝업.html</a>
+					</td>
+					<td class="Bgreen color">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>01_메인</strong>
+					</th>
+					<th>
+						01_로그인전
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/01_메인.html" target="_blank">01_메인.html</a>
+					</td>
+					<td class="Bgreen">주석처리</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						01_로그인전_팝업
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/01_메인_팝업.html" target="_blank">01_메인_팝업.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						02_로그인후
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/01_메인_로그인후.html" target="_blank">01_메인_로그인후.html</a>
+					</td>
+					<td class="Bgreen">주석처리</td>
+				</tr>
+				<tr>
+					<th class="color">
+						<strong>&nbsp;</strong>
+					</th>
+					<th class="color">
+						02_로그인후_기기연결상태
+					</th>
+					<th class="color">
+						&nbsp;
+					</th>
+					<td class="color">
+						<a href="html/01_메인_기기연결상태.html" target="_blank">01_메인_기기연결상태.html</a>
+					</td>
+					<td class="Bgreen color">주석처리</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>02_로그인</strong>
+					</th>
+					<th>
+						01_로그인메인
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/02_로그인_00_로그인메인.html" target="_blank">02_로그인_00_로그인메인.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<th>
+						01_휴대폰번호로그인_휴대폰번호입력
+					</th>
+					<td>
+						<a href="html/02_로그인_01_휴대폰번호로그인01.html" target="_blank">02_로그인_01_휴대폰번호로그인01.html</a>
+					</td>
+					<td >&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<th>
+						01_휴대폰번호로그인_휴대폰번호입력_팝업
+					</th>
+					<td>
+						<a href="html/02_로그인_01_휴대폰번호로그인01_팝업.html" target="_blank">02_로그인_01_휴대폰번호로그인01_팝업.html</a>
+					</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<th>
+						01_휴대폰번호로그인_생년월일입력
+					</th>
+					<td>
+						<a href="html/02_로그인_01_휴대폰번호로그인02.html" target="_blank">02_로그인_01_휴대폰번호로그인02.html</a>
+					</td>
+					<td ></td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<th>
+						01_휴대폰번호로그인_생년월일입력_팝업
+					</th>
+					<td>
+						<a href="html/02_로그인_01_휴대폰번호로그인02_팝업.html" target="_blank">02_로그인_01_휴대폰번호로그인02_팝업.html</a>
+					</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<th class="color">
+						<strong>&nbsp;</strong>
+					</th>
+					<th class="color">
+						
+					</th>
+					<th class="color">
+						02_안면인식로그인_카메라
+					</th>
+					<td class="color">
+						<em>[image]</em> <a href="html/02_안면인식로그인_카메라.png" target="_blank">02_안면인식로그인_카메라</a>
+					</td>
+					<td class="Bgreen color">이미지</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>03_회원가입</strong>
+					</th>
+					<th>
+						01_약관동의
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/03_회원가입_01_약관동의.html" target="_blank">03_회원가입_01_약관동의.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						01_약관동의_약관보기_팝업
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/03_회원가입_01_약관동의_약관보기_팝업.html" target="_blank">03_회원가입_01_약관동의_약관보기_팝업.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						02_휴대폰번호입력_인증전
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/03_회원가입_02_휴대폰번호입력_인증전.html" target="_blank">03_회원가입_02_휴대폰번호입력_인증전.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						02_휴대폰번호입력_인증전_팝업
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/03_회원가입_02_휴대폰번호입력_인증전_팝업.html" target="_blank">03_회원가입_02_휴대폰번호입력_인증전_팝업.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						02_휴대폰번호입력_인증후
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/03_회원가입_02_휴대폰번호입력_인증후.html" target="_blank">03_회원가입_02_휴대폰번호입력_인증후.html</a>
+					</td>
+					<td class="Bgreen">주석처리</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						02_휴대폰번호입력_인증후_팝업
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/03_회원가입_02_휴대폰번호입력_인증후_팝업.html" target="_blank">03_회원가입_02_휴대폰번호입력_인증후_팝업.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						03_이름입력
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/03_회원가입_03_이름입력.html" target="_blank">03_회원가입_03_이름입력.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						04_생년월일입력
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/03_회원가입_04_생년월일입력.html" target="_blank">03_회원가입_04_생년월일입력.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th class="color">
+						<strong>&nbsp;</strong>
+					</th>
+					<th class="color">
+						05_회원가입완료
+					</th>
+					<th class="color">
+						&nbsp;
+					</th>
+					<td class="color">
+						<a href="html/03_회원가입_05_회원가입완료.html" target="_blank">03_회원가입_05_회원가입완료.html</a>
+					</td>
+					<td class="Bgreen color">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>04_안면인식등록</strong>
+					</th>
+					<th>
+						01_약관동의_팝업
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/04_안면인식등록_01_약관동의_팝업.html" target="_blank">04_안면인식등록_01_약관동의_팝업.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						02_안면인식등록 방법
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/04_안면인식등록_02_안면인식등록방법.html" target="_blank">04_안면인식등록_02_안면인식등록방법.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						03_안면인식 카메라
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<em>[image]</em> <a href="html/04안면인식등록_03안면인식_카메라.png" target="_blank">04안면인식등록_03안면인식_카메라</a>
+					</td>
+					<td class="Bgreen">이미지</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						03_안면인식 카메라_팝업
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/04_안면인식등록_03_안면인식카메라_팝업.html" target="_blank">04_안면인식등록_03_안면인식카메라_팝업.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						04_안면인식등록
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/04_안면인식등록_04_안면인식등록.html" target="_blank">04_안면인식등록_04_안면인식등록.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						04_안면인식등록_팝업
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/04_안면인식등록_04_안면인식등록_팝업.html" target="_blank">04_안면인식등록_04_안면인식등록_팝업.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th class="color">
+						<strong>&nbsp;</strong>
+					</th>
+					<th class="color">
+						04_안면인식등록 완료
+					</th>
+					<th class="color">
+						&nbsp;
+					</th>
+					<td class="color">
+						<a href="html/04_안면인식등록_05_안면인식등록완료.html" target="_blank">04_안면인식등록_05_안면인식등록완료.html</a>
+					</td>
+					<td class="Bgreen color">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>05_혈압측정</strong>
+					</th>
+					<th>
+						01_가이드
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/05_혈압측정_01_가이드.html" target="_blank">05_혈압측정_01_가이드.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						02_혈압측정 결과_팝업
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/05_혈압측정_02_혈압측정결과_팝업.html" target="_blank">05_혈압측정_02_혈압측정결과_팝업.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th class="color">
+						<strong>&nbsp;</strong>
+					</th>
+					<th class="color">
+						03_종합결과 안내_팝업
+					</th>
+					<th class="color">
+						&nbsp;
+					</th>
+					<td class="color">
+						<a href="html/05_혈압측정_03_종합결과안내_팝업.html" target="_blank">05_혈압측정_03_종합결과안내_팝업.html</a>
+					</td>
+					<td class="Bgreen color">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>06_체성분측정</strong>
+					</th>
+					<th>
+						01_가이드
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/06_체성분측정_01_가이드.html" target="_blank">06_체성분측정_01_가이드.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						02_체성분측정 결과_팝업
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/06_체성분측정_02_체성분측정결과_팝업.html" target="_blank">06_체성분측정_02_체성분측정결과_팝업.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th class="color">
+						<strong>&nbsp;</strong>
+					</th>
+					<th class="color">
+						03_종합결과 안내_팝업
+					</th>
+					<th class="color">
+						&nbsp;
+					</th>
+					<td class="color">
+						<a href="html/06_체성분측정_03_종합결과안내_팝업.html" target="_blank">06_체성분측정_03_종합결과안내_팝업.html</a>
+					</td>
+					<td class="Bgreen color">&nbsp;</td>
+				</tr>
+				<tr>
+					<th class="color">
+						<strong>07_종합결과 확인</strong>
+					</th>
+					<th class="color">
+						&nbsp;
+					</th>
+					<th class="color">
+						&nbsp;
+					</th>
+					<td class="color">
+						<a href="html/07_종합결과확인.html" target="_blank">07_종합결과확인.html</a><br />
+						>> <a href="html/07_종합결과확인_차트가이드.png" target="_blank">차트 가이드</a>
+					</td>
+					<td class="Bgreen color">주석처리</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>08_개인정보 관리</strong>
+					</th>
+					<th>
+						01_메인
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/08_개인정보관리_00_메인.html" target="_blank">08_개인정보관리_00_메인.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						01_메인_안면인식 등록_팝업
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/08_개인정보관리_00_메인_안면인식등록_팝업.html" target="_blank">08_개인정보관리_00_메인_안면인식등록_팝업.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<th>
+						01_개인정보 수정
+					</th>
+					<td>
+						<a href="html/08_개인정보관리_01_개인정보수정.html" target="_blank">08_개인정보관리_01_개인정보수정.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<th>
+						01_개인정보 수정_이름수정
+					</th>
+					<td>
+						<a href="html/08_개인정보관리_01_개인정보수정_이름수정.html" target="_blank">08_개인정보관리_01_개인정보수정_이름수정.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<th>
+						01_개인정보 수정_이름수정_팝업01
+					</th>
+					<td>
+						<a href="html/08_개인정보관리_01_개인정보수정_이름수정_팝업01.html" target="_blank">08_개인정보관리_01_개인정보수정_이름수정_팝업01.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<th>
+						01_개인정보 수정_이름수정_팝업02
+					</th>
+					<td>
+						<a href="html/08_개인정보관리_01_개인정보수정_이름수정_팝업02.html" target="_blank">08_개인정보관리_01_개인정보수정_이름수정_팝업02.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<th>
+						01_개인정보 수정_휴대폰번호수정
+					</th>
+					<td>
+						<a href="html/08_개인정보관리_01_개인정보수정_휴대폰번호수정.html" target="_blank">08_개인정보관리_01_개인정보수정_휴대폰번호수정.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<th>
+						01_개인정보 수정_휴대폰번호수정_팝업01
+					</th>
+					<td>
+						<a href="html/08_개인정보관리_01_개인정보수정_휴대폰번호수정_팝업01.html" target="_blank">08_개인정보관리_01_개인정보수정_휴대폰번호수정_팝업01.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<th>
+						01_개인정보 수정_휴대폰번호수정_팝업02
+					</th>
+					<td>
+						<a href="html/08_개인정보관리_01_개인정보수정_휴대폰번호수정_팝업02.html" target="_blank">08_개인정보관리_01_개인정보수정_휴대폰번호수정_팝업02.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<th>
+						01_개인정보 수정_생년월일/성별수정
+					</th>
+					<td>
+						<a href="html/08_개인정보관리_01_개인정보수정_생년월일수정.html" target="_blank">08_개인정보관리_01_개인정보수정_생년월일수정.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<th>
+						01_개인정보 수정_생년월일/성별수정_팝업01
+					</th>
+					<td>
+						<a href="html/08_개인정보관리_01_개인정보수정_생년월일수정_팝업01.html" target="_blank">08_개인정보관리_01_개인정보수정_생년월일수정_팝업01.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<th>
+						01_개인정보 수정_생년월일/성별수정_팝업02
+					</th>
+					<td>
+						<a href="html/08_개인정보관리_01_개인정보수정_생년월일수정_팝업02.html" target="_blank">08_개인정보관리_01_개인정보수정_생년월일수정_팝업02.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<th>
+						02_회원탈퇴01
+					</th>
+					<td>
+						<a href="html/08_개인정보관리_02_회원탈퇴01.html" target="_blank">08_개인정보관리_02_회원탈퇴01.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<th>
+						02_회원탈퇴02_인증전
+					</th>
+					<td>
+						<a href="html/08_개인정보관리_02_회원탈퇴02_인증전.html" target="_blank">08_개인정보관리_02_회원탈퇴02_인증전.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<th>
+						02_회원탈퇴02_인증후
+					</th>
+					<td>
+						<a href="html/08_개인정보관리_02_회원탈퇴02_인증후.html" target="_blank">08_개인정보관리_02_회원탈퇴02_인증후.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<th>
+						02_회원탈퇴_팝업01
+					</th>
+					<td>
+						<a href="html/08_개인정보관리_02_회원탈퇴_팝업01.html" target="_blank">08_개인정보관리_02_회원탈퇴_팝업01.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th class="color">
+						<strong>&nbsp;</strong>
+					</th>
+					<th class="color">
+						&nbsp;
+					</th>
+					<th class="color">
+						02_회원탈퇴_팝업02
+					</th>
+					<td class="color">
+						<a href="html/08_개인정보관리_02_회원탈퇴_팝업02.html" target="_blank">08_개인정보관리_02_회원탈퇴_팝업02.html</a>
+					</td>
+					<td class="Bgreen color">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>09_태블릿 설정</strong>
+					</th>
+					<th>
+						01_비밀번호 입력 
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/09_태블릿설정_00_비밀번호입력.html" target="_blank">09_태블릿설정_00_비밀번호입력.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						01_비밀번호 입력_팝업
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/09_태블릿설정_00_비밀번호입력_팝업.html" target="_blank">09_태블릿설정_00_비밀번호입력_팝업.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						02_메인
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/09_태블릿설정_00_메인.html" target="_blank">09_태블릿설정_00_메인html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						02_메인_업데이트_팝업01
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/09_태블릿설정_00_메인_업데이트_팝업01.html" target="_blank">09_태블릿설정_00_메인_업데이트_팝업01.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						02_메인_업데이트_팝업02
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<td>
+						<a href="html/09_태블릿설정_00_메인_업데이트_팝업02.html" target="_blank">09_태블릿설정_00_메인_업데이트_팝업02.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<th>
+						01_서버연동
+					</th>
+					<td>
+						<a href="html/09_태블릿설정_01_서버연동.html" target="_blank">09_태블릿설정_01_서버연동.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<th>
+						01_서버연동_연동해지_팝업01
+					</th>
+					<td>
+						<a href="html/09_태블릿설정_01_서버연동_연동해지_팝업01.html" target="_blank">09_태블릿설정_01_서버연동_연동해지_팝업01.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<th>
+						01_서버연동_연동해지_팝업02
+					</th>
+					<td>
+						<a href="html/09_태블릿설정_01_서버연동_연동해지_팝업02.html" target="_blank">09_태블릿설정_01_서버연동_연동해지_팝업02.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<th>
+						01_서버연동_연동재설정_팝업
+					</th>
+					<td>
+						<a href="html/09_태블릿설정_01_서버연동_연동재설정_팝업.html" target="_blank">09_태블릿설정_01_서버연동_연동재설정_팝업.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<th>
+						02_측정기 연결상태_정상연결
+					</th>
+					<td>
+						<a href="html/09_태블릿설정_02_측정기연결상태_정상연결.html" target="_blank">09_태블릿설정_02_측정기연결상태_정상연결.html</a>
+					</td>
+					<td class="Bgreen">주석처리</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<th>
+						02_측정기 연결상태_연결안됨
+					</th>
+					<td>
+						<a href="html/09_태블릿설정_02_측정기연결상태_연결안됨.html" target="_blank">09_태블릿설정_02_측정기연결상태_연결안됨.html</a>
+					</td>
+					<td class="Bgreen">주석처리</td>
+				</tr>
+				<tr>
+					<th>
+						<strong>&nbsp;</strong>
+					</th>
+					<th>
+						&nbsp;
+					</th>
+					<th>
+						02_측정기 연결상태_연결방법
+					</th>
+					<td>
+						<a href="html/09_태블릿설정_02_측정기연결상태_연결방법.html" target="_blank">09_태블릿설정_02_측정기연결상태_연결방법.html</a>
+					</td>
+					<td class="Bgreen">&nbsp;</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</body>
+</html>

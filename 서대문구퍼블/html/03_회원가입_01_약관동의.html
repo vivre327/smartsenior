@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+    <div class="wrap">
+
+        <!--상단영역-->
+        <header class="header">
+            <div class="header_inner">
+                <h1 class="logo">
+                    <span class="ci">서대문구</span>
+                    <b>스마트 경로당</b>
+                </h1>
+                <div class="header_date">
+                    <span class="hd_date">2024.04.30</span>
+                    <span class="hd_time">오전<b>09:00</b></span>
+                </div>
+            </div>
+        </header>
+        <!--//상단영역-->
+
+        <!--컨텐츠영역-->
+        <div class="contents_wrap join">
+            <!--타이틀영역-->
+            <section class="title">
+                <button class="btn_gomain btn_basic">처음으로</button>
+                <h1>회원가입</h1>
+            </section>
+            <!--//타이틀영역-->
+
+            <div class="contents">
+                <section class="join_wrap join_step01">
+                    <div class="step">
+                        <ol>
+                            <li class="act"><strong>1</strong>약관동의</li>
+                            <li><strong>2</strong>휴대폰번호 입력</li>
+                            <li><strong>3</strong>이름 입력</li>
+                            <li><strong>4</strong>생년월일/성별 입력</li>
+                        </ol>
+                    </div>  
+                    <div class="terms">
+                        <div class="agree_all">
+                            <p>서비스 이용을 위해 약관을 확인 후 동의 해주세요.</p>
+                            <div class="input_group"><input type="checkbox" id="agree01"><label for="agree01"><span>전체동의</span></label></div>
+                        </div>
+                        <div class="terms_type_list">
+                            <div class="terms_type act"><!--동의체크 시-->
+                                <div class="input_group"><input type="checkbox" id="agree02" checked><label for="agree02"><span>동의함</span></label></div>
+                                <p>[필수] 이용약관</p>
+                                <button class="terms_view btn_basic">약관보기</button>
+                            </div>
+                            <div class="terms_type">
+                                <div class="input_group"><input type="checkbox" id="agree03"><label for="agree03"><span>동의함</span></label></div>
+                                <p>[필수] 개인정보 수집이용 동의</p>
+                                <button class="terms_view btn_basic">약관보기</button>
+                            </div>
+                            <div class="terms_type">
+                                <div class="input_group"><input type="checkbox" id="agree04"><label for="agree04"><span>동의함</span></label></div>
+                                <p>[선택] 제3자 개인정보 제공 동의</p>
+                                <button class="terms_view btn_basic">약관보기</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="btn_wrap">
+                    <button class="btn_cancle btn_basic">취소</button>
+                    <button class="btn_next btn_basic">다음</button>
+                </section>
+            </div><!--//cotents-->
+        </div><!--//contents_wrap-->
+        <!--//컨텐츠영역-->
+
+    </div><!--//wrap-->
+</body>
+</html>

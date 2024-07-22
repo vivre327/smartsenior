@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920">
+  <title>강화군 스마트경로당</title>
+  <link rel="stylesheet" href="../assets/css/style-ui.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header_inner">
+        <div class="header_left">
+          <button type="button" class="btn_prev_page">
+            <span>이전</span>
+          </button>
+        </div>
+        <h2 class="header_title">혈당 측정</h2>
+        <div class="header_user">
+          <span class="user_name">홍길동님</span>
+          <button type="button" class="btn_logout">로그아웃</button>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+    </main>
+  </div>
+
+  <!-- 팝업(혈당측정 종류) -->
+  <article class="popup mask_bg">
+    <div class="popup_box pop_st1">
+      <button type="button" class="popup_close_btn">
+        <span class="a11yHidden">팝업닫기</span>
+      </button>
+      <div class="popup_content">
+        <p class="popup_tit">혈당 측정 종류를 선택해주세요.</p>
+        <ul class="select_options_sugar c2_r2">
+          <li>
+            <button type="button" class="option_btn selected">식전</button>
+          </li>
+          <li>
+            <button type="button" class="option_btn">아침</button>
+          </li>
+          <li>
+            <button type="button" class="option_btn">식후 2시간 이내</button>
+          </li>
+          <li>
+            <button type="button" class="option_btn">식후 2시간 이후</button>
+          </li>
+        </ul>
+        <div class="popup_btns">
+          <button type="button" class="btn_gray">취소</button>
+          <button type="button" class="btn_blue">확인</button>
+        </div>
+      </div>
+    </div>
+  </article>
+
+</body>
+</html>

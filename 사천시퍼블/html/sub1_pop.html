@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920">
+  <title>강화군 스마트경로당</title>
+  <link rel="stylesheet" href="../assets/css/style-ui.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header_inner">
+        <div class="header_left">
+          <button type="button" class="btn_prev_page">
+            <span>이전</span>
+          </button>
+        </div>
+        <h2 class="header_title">체온 측정</h2>
+        <div class="header_user">
+          <span class="user_name">홍길동님</span>
+          <button type="button" class="btn_logout">로그아웃</button>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+    </main>
+  </div>
+
+  <!-- 팝업(체온측정 완료) -->
+  <article class="popup mask_bg">
+    <div class="popup_box pop_st1">
+      <button type="button" class="popup_close_btn">
+        <span class="a11yHidden">팝업닫기</span>
+      </button>
+      <div class="popup_content">
+        <p class="popup_tit color_b">측정이 완료되었습니다.</p>
+        <dl class="dl_result_temper">
+          <dt>체온</dt>
+          <dd>
+            <b class="temper">36.5 ℃</b>
+          </dd>
+        </dl>
+        <div class="popup_btns">
+          <button type="button" class="btn_gray">닫기</button>
+          <button type="button" class="btn_orange">다시 측정하기</button>
+          <button type="button" class="btn_blue">종합결과 확인</button>
+        </div>
+      </div>
+    </div>
+  </article>
+
+</body>
+</html>

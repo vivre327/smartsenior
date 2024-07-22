@@ -1,0 +1,2067 @@
+@import "reset.css";
+
+/*1280해상도 기준*/
+.wrap{
+    height: 100%;
+}
+button.btn_basic{
+    font-weight: 600;
+    font-size: 1.75rem;
+    color: #fff; 
+    background: #0e4194;
+    border-radius: 6px;
+    padding: 12px 40px;
+    margin-left: 4px;
+}
+button.btn_basic:first-child{
+    margin-left: 0;
+}
+button.btn_cancle, button.btn_close, button.btn_prev, button.btn_unlink{
+    background: #66686B;
+}
+input[type="text"], input[type="password"]{
+    color: #1d1d1d;
+    background: #fff;
+    border: 2px solid #a7a7a7;
+    border-radius: 3px;
+    padding: 17px 60px 16px 30px;
+    min-height: 32px;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+}
+input::placeholder{
+    font-size: 1.5rem;
+    color: #a7a7a7;
+}
+label{
+    font-size: 1.75rem;
+    font-weight: 600;
+    vertical-align: middle;
+}
+input[type="checkbox"]{
+    display: none;
+}
+input[type="checkbox"] + label > span{
+    vertical-align: middle;
+    padding-left: 5px;
+}
+input[type="checkbox"] + label::before{
+    content:'';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border: 3px solid #a7a7a7;
+    border-radius: 3px;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+input[type="checkbox"]:checked + label::before{
+    content:'';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #417FDD url(../img/icon_checkbox_checked.png) center center no-repeat;
+    border: 3px solid #417FDD;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+textarea{
+    background: #fff;
+    border: 2px solid #a7a7a7;
+    border-radius: 3px;
+    padding: 20px;
+    font-size: 1.25rem;
+    line-height: 30px;
+    letter-spacing: -1.2px;
+    font-family: 'Noto Sans', sans-serif;
+    resize: none;
+}
+textarea::-webkit-scrollbar{
+    width: 12px;
+}
+textarea::-webkit-scrollbar-thumb{
+    background: #c0c1c6;
+    border-radius: 50px;
+    cursor: pointer;
+    /* border: 10px solid #fff; */
+}
+textarea::-webkit-scrollbar-track{
+    background: transparent;
+    box-shadow: inset 0 0 2px #ddd;
+}
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-thumb{
+    background: #c0c1c6;
+    border-radius: 50px;
+    cursor: pointer;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+    box-shadow: inset 0 0 2px #fff;
+}
+
+/*상단*/
+header{
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+    padding: 18px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 80px;
+}
+header .mark{
+    width: 130px;
+    height: 34px;
+    background: url(../img/mark.png) 0 center no-repeat;
+    display: inline-block;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+}
+header .business_info{
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 44px;
+}
+header .business_info .business_name{
+    color: #0e4194;
+    letter-spacing: -1px;
+    margin-left: 20px;
+}
+header .business_info .time{
+    letter-spacing: 0;
+    font-weight: 700;
+}
+header .business_info .time::before{
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 50%;
+    background: #C4C4C4;
+    margin: 0 20px;
+    vertical-align: middle;
+}
+header .private_info{
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: 600;
+    vertical-align: middle;
+}
+header .private_info .name{
+    vertical-align: middle;
+}
+header .private_info .btn_logout{
+    background: #2D3034;
+    font-size: 1.25rem;
+    width: 110px;
+    height: 44px;
+    border-radius: 100px;
+    margin: 0 38px 0 12px;
+    vertical-align: middle;
+    padding: 0;
+}
+header .btn_setting{
+    width: 44px;
+    height: 44px;
+    background: url(../img/icon_setting.png) center center no-repeat;
+    display: inline-block;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.contents_wrap{
+    height: calc(100vh - 80px);
+    padding: 30px;
+    position: relative;
+}
+
+/*메인*/
+.main .contents{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    height: 100%;
+}
+.main .contents .login_wrap{
+    width: 28%;
+    margin: 100px 40px 0 40px;
+}
+.main .contents .login_wrap p{
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: -2.5px;
+    padding-bottom: 36px;
+}
+.main .contents .login_wrap p>span{
+    display: block;
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+.main .contents .login_wrap.after p{
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+.main .contents .login_wrap.after{
+    margin-top: 145px;
+}
+.main .contents .login_wrap.after p>span{
+    font-weight: 600;
+    font-size: 2.2rem;
+}
+.main .contents .login_wrap .btn_group{
+    display: flex;
+    flex-direction: column;
+}
+.main .contents .login_wrap .btn_group button{
+    padding: 20px;
+    margin-bottom: 6px;
+    margin-left: 0;
+}
+.main .contents .login_wrap button.btn_login{
+    background: #0e4194;
+}
+.main .contents .login_wrap .btn_join{
+    background: #417fdd;
+}
+.main .contents .login_wrap .btn_persoanl{
+    color: #0e4194;
+    background: #fff;
+}
+.menu_wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 72%;
+    height: 100%;
+}
+.connect_state{
+    text-align: center;
+    border-radius: 60px 60px 0 60px;
+    width: calc(100% / 2 - 10px);
+    position: relative;
+}
+.connect_state:first-child{
+    margin-left: 0;
+}
+.connect_state.menu_heart{
+    background: url(../img/bg_heart.png) bottom right no-repeat, linear-gradient(-45deg, #0B4CB5 25%, #B572E4 75%);
+    background-size: 75%, 100%;
+}
+.connect_state.menu_fat{
+    background: url(../img/bg_fat.png) bottom right no-repeat, linear-gradient(-45deg, #0B4CB5 25%, #B572E4 75%);
+    background-size: 75%, 100%;
+}
+.main .contents .menu{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.main .contents .menu > span{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #fff;
+    position: relative;
+    top: 25%;
+}
+.connect_state .no_connect{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.5rem;
+    background: url(../img/icon_bluetooth.png), url(../img/pattern.png), rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat, repeat, no-repeat;
+    background-position: center 45%, 0 0, 0 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 60px 60px 0 60px;
+    padding-top: 80%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    z-index: 1;
+}
+
+/*로그인*/
+button.btn_gomain{
+    font-size: 1.25rem;
+    background: #2D3034;
+    height: 54px;
+    padding: 0 20px;
+    position: absolute;
+    left: 0;
+}
+button.btn_gomain::before{
+    content: url(../img/icon_arrow.png);
+    display: inline-block;
+    width: 10px;
+    height: 17px;
+    padding-right: 6px;
+}
+.title{
+    text-align: center;
+    position: relative;
+    height: 54px;
+}
+.title h1{
+    font-size: 2.5rem;
+}
+.login .contents, .login_phone .contents{
+    height: calc(100% - 54px);
+}
+.login_menu_wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+}
+.login_menu{
+    text-align: center;
+    background: linear-gradient(-45deg, #0B4CB5 25%, #B572E4 75%);
+    border-radius: 60px 60px 0 60px;
+    width: calc(100% / 3 - 10px);
+    position: relative;
+}
+.login_menu.login_menu_phone{
+    background: url(../img/bg_phone.png) center 70% no-repeat, linear-gradient(-45deg, #0B4CB5 25%, #B572E4 75%);
+    background-size: 32%, 100%;
+}
+.login_menu.login_menu_face{
+    background: url(../img/bg_face.png) center 68% no-repeat, linear-gradient(-45deg, #0B4CB5 25%, #B572E4 75%);
+    background-size: 36%, 100%;
+}
+.login_menu > span{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff;
+    position: relative;
+    top: 20%;
+}
+.login_menu_join strong{
+    font-size: 2.5rem;
+    padding-bottom: 12px;
+}
+.login_menu_join > span{
+    font-size: 1.75rem;
+    top: 33%;
+}
+
+.contents h2{
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.keypad_group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.login_phone_wrap .input_wrap{
+    width: 45%;
+    padding-top: 70px;
+}
+.keypad{
+    width: 45%;
+}
+.input_group{
+    margin: 16px 0;
+    position: relative;
+}
+.input_group div.input_text{
+    background: #fff;
+    border: 2px solid #a7a7a7;
+    border-radius: 3px;
+    padding: 15px 60px 16px 30px;
+    min-height: 32px;
+    box-sizing: border-box;
+}
+span.label{
+    font-size: 2rem;
+    font-weight: 600;
+    display: block;
+}
+.input_group .value{
+    color: #a7a7a7;
+    font-size: 1.5rem;
+    letter-spacing: 0;
+}
+.value_normal .value{
+    color: #1d1d1d;
+}
+button.btn_delete_text{
+    width: 19px;
+    height: 19px;
+    background: url(../img/btn_delete_text.png) center center no-repeat;
+    display: inline-block;
+    text-indent: -99999px;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    top: 23px;
+    right: 30px;
+}
+.desc{
+    font-size: 1.6rem;
+    display: block;
+}
+.desc.warning{
+    color: #ec6707;
+}
+.desc.confirm{
+    color: #0e4194;
+}
+.btn_wrap{
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+}
+
+/*키패드*/
+.keypad button{
+    background: #417FDD;
+    font-size: 2.75rem;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 6px;
+}
+.keypad button.number{
+    background: #417FDD;
+    padding: 5px 0;
+}
+.keypad button.delete_one{
+    background: #5A79A7;
+    grid-column: 4/6;
+    grid-row: 1/3;
+    font-size: 2rem;
+    width: 90%;
+}
+.keypad button.delete_all{
+    background: #0E4194;
+    grid-column: 4/6;
+    grid-row: 3/5;
+    font-size: 2rem;
+    width: 90%;
+}
+.number_group{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 6px;
+    column-gap: 6px;
+}
+.number:nth-child(11){
+    grid-column: 2/4;
+}
+
+/*회원가입*/
+.join .contents{
+    height: calc(100% - 54px);
+}
+.step{
+    padding: 20px 0;
+    margin: 0 auto;
+    width: 95%;
+}
+.step ol{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.step li{
+    background: #fff;
+    border-radius: 100px;
+    height: 70px;
+    line-height: 70px;
+    padding-right: 20px;
+    margin-right: 40px;
+    font-size: 1.5rem;
+    color: #66686B;
+    width: 100%;
+    position: relative;
+}
+.step li:nth-child(odd){
+    width: 70%;
+}
+.step li:last-child{
+    margin-right: 0;
+}
+.step li::before{
+    content: url(../img/icon_step_arrow.png);
+    display: inline-block;
+    width: 21px;
+    height: 25px;
+    position: absolute;
+    top: 3px;
+    left: -30px;
+}
+.step li:first-child::before{
+    content: none;
+}
+.step li > strong{
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    border-radius: 100px;
+    background: #66686B;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    margin-right: 10px;
+}
+.step li.act{
+    color: #1d1d1d;
+    font-weight: 600;
+}
+.step li.act > strong{
+    background: linear-gradient(-45deg, #0B4CB5 25%, #B572E4 75%);
+}
+.agree_all{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 6px 0;
+}
+.agree_all p{
+    align-self: center;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-right: 30px;
+}
+.terms_type_list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.terms_type{
+    align-items: stretch;
+    background: #fff;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 40px 40px 0 40px;
+    border: 5px solid #fff;
+    width: 100%;
+    text-align: center;
+    padding: 15px 30px 25px 30px;
+    margin-left: 20px;
+}
+.terms_type.act{
+    border: 5px solid #0E4194;
+}
+.terms_type:first-child{
+    margin-left: 0;
+}
+.terms_type p{
+    font-size: 1.5rem;
+    border-top: 2px solid #d7d7d7;
+    padding: 20px 0;
+}
+.terms_type .input_group{
+    margin: 10px 0 20px 0;
+}
+.terms_type label{
+    font-size: 1.5rem;
+}
+button.terms_view{
+    background: #417FDD;
+    font-size: 1.25rem;
+}
+.join_wrap .input_wrap{
+    width: 50%;
+    padding-top: 20px;
+}
+.certification_group .input_group{
+    width: 67%;
+    display: inline-block;
+}
+.input_group .timer{
+    font-size: 1.25rem;
+    letter-spacing: 0;
+    color: #ec6707;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+button.btn_certification{
+    background: #2D3034;
+    font-size: 1.25rem;
+    display: inline-block;
+    padding: 18px;
+    width: 170px;
+}
+.input_wrap.name_input{
+    width: 63%;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 40px 40px 0 40px;
+    padding: 52px 90px 42px 90px;
+    margin-top: 20px;
+}
+.name_input .input_group{
+    width: 100%;
+}
+.name_input .input_text{
+    width: 100%;
+}
+.gender_choice{
+    margin: 16px 0;
+}
+.gender_choice .label{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 82px;
+}
+.gender_choice input[type=radio]{
+    display: none;
+}
+.gender_choice input[type=radio]+label{
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 6px;
+    background: #fff;
+    height: 65px;
+    line-height: 65px;
+    width: 150px;
+    text-align: center;
+    margin-left: 8px;
+    
+}
+.gender_choice input[type=radio]:checked+label{
+    background: #0E4194 url(../img/icon_radio_checked.png) right 24px top 24px no-repeat;
+    color: #fff;
+    padding-right: 16px;
+}
+.completed{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+.completed p{
+    font-size: 1.75rem;
+    font-weight: 600;
+    background: url(../img/icon_confirm.png) left center no-repeat;
+    padding: 20px 0 20px 94px;
+}
+.completed .info{
+    font-size: 2rem;
+    background: #fff url(../img/icon_info.png) left 80px center no-repeat;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 40px 40px 0 40px;
+    padding: 42px 42px 42px 267px;
+    width: 63%;
+    margin-top: 30px;
+}
+.completed .info li{
+    height: 52px;
+    line-height: 52px;
+}
+
+/*안면인식 등록*/
+.face_reg_guide{
+    width: 63%;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 40px 40px 0 40px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.08);
+    padding: 35px 50px;
+}
+.face_reg_guide h2{
+    font-weight: 600;
+    border-bottom: 2px solid #d7d7d7;
+}
+.face_reg_guide p{
+    font-size: 2rem;
+    background: url(../img/icon_face_color.png) center right 20px no-repeat;
+    padding: 60px 243px 60px 20px;
+    line-height: 1.5;
+    text-align: left;
+}
+.face_reg_guide p > strong{
+    font-weight: 600;
+    color: #0E4194;
+}
+.face_reg{
+    text-align: center;
+}
+.face_reg img{
+    border: 2px solid #d7d7d7;
+    max-width: 100%;
+}
+.face_reg .completed{
+    padding-top: 20px;
+}
+
+/*혈압측정*/
+.heart_take .contents{
+    height: calc(100% - 54px);
+}
+.take_order_wrap{
+    height: 100%;
+}
+.take_order_wrap ol{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 30px;
+    height: 100%;
+}
+.take_order_wrap li{
+    background: #fff;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 60px 60px 0 60px;
+    width: calc(100% / 3 - 10px);
+    position: relative;
+}
+.take_order_wrap .num{
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    display: inline-block;
+    border-radius: 100px;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    background: linear-gradient(-45deg, #0B4CB5 25%, #B572E4 75%);
+    position: absolute;
+    top: -10px;
+    left: -10px;
+} 
+.take_order_wrap .method{
+    text-align: center;
+}
+.take_order_wrap .method > strong{
+    font-size: 1.75rem;
+    font-weight: 600;
+    display: block;
+    border-bottom: 2px solid #d7d7d7;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.take_order_wrap .method p{
+    font-size: 1.25rem;
+    line-height: 1.6;
+    text-align: left;
+}
+.take_order_wrap .method p > strong{
+    color: #0B4CB5;
+}
+.heart_take_order li{
+    padding: 60px 30px 0 30px;
+}
+.heart_take_order li.list01{
+    background: #fff url(../img/img_heart01.png) bottom 30px right 30px no-repeat;
+}
+.heart_take_order li.list02{
+    background: #fff url(../img/img_heart02.png) bottom 50px right 30px no-repeat;
+}
+.heart_take_order li.list03{
+    background: #fff url(../img/img_heart03.png) bottom 50px right 30px no-repeat;
+}
+.heart_take_order li.list01 .method p + p{
+    padding-right: 130px;
+}
+.heart_result, .fat_result {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+.heart_result dl{
+    background: #E8EAF1;
+    border-radius: 36px 36px 0 36px;
+    font-weight: 600;
+    width: 48%;
+    padding: 46px 0;
+    margin-left: 16px;
+}
+.heart_result dl:first-child{
+    margin-left: 0;
+}
+.heart_result dt, .fat_result dt{
+    font-size: 1.75rem;
+    padding-bottom: 10px;
+}
+.heart_result dd, .fat_result dd{
+    font-size: 3.5rem;
+}
+.heart_result dd > span.unit, .fat_result dd > span.unit{
+    font-size: 1.75rem;
+}
+
+/*체성분측정*/
+.fat_take_order li{
+    padding: 40px 27px 0 27px;
+}
+.fat_take_order .method > strong{
+    border-bottom: 0 none;
+    margin-bottom: 0;
+}
+.fat_take_order .column_group{
+    display: flex;
+    flex-direction: column;
+    width: 26%;
+}
+.fat_take_order li.list01{
+    background: #fff url(../img/img_fat01.png) bottom 30px right 30px no-repeat;
+    height: 50%;
+    width: 100%;
+}
+.fat_take_order li.list02{
+    background: #fff url(../img/img_fat02.png) bottom 30px right 30px no-repeat;
+    margin-top: 20px;
+    margin-left: 0;
+    height: 50%;
+    width: 100%;
+}
+.fat_take_order li.list03{
+    background: #fff url(../img/img_fat03.png) top 80px center no-repeat;
+    width: 49.5%;
+}
+.fat_take_order li.list04{
+    background: #fff url(../img/img_fat04.png) bottom 30px right 30px no-repeat;
+    width: 22%;
+}
+.fat_take_order li.list01 p{
+    padding-right: 128px;
+}
+.fat_take_order li.list02 p{
+    padding-right: 110px;
+}
+.fat_take_order  ol.pose li{
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    margin-left: 0;
+    padding: 0;
+    width: 30%;
+    position: absolute;
+    font-size: 1.25rem;
+}
+.fat_take_order  ol.pose li.pose01{
+    text-align: right;
+    top: 139px;
+    left: 20px;
+}
+.fat_take_order  ol.pose li.pose03{
+    text-align: right;
+    top: 233px;
+    left: 41px;
+}
+.fat_take_order  ol.pose li.pose05{
+    text-align: right;
+    top: 359px;
+    left: 30px;
+}
+.fat_take_order  ol.pose li.pose02{
+    text-align: left;
+    top: 96px;
+    right: 46px;
+}
+.fat_take_order  ol.pose li.pose04{
+    text-align: left;
+    top: 171px;
+    right: 34px;
+}
+.fat_take_order  ol.pose li.pose06{
+    text-align: left;
+    top: 382px;
+    right: 33px;
+}
+.fat_result dl{
+    background: #E8EAF1;
+    border-radius: 36px 36px 0 36px;
+    font-weight: 600;
+    width: 48%;
+    padding: 29px 30px;
+    margin-left: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.fat_result dl:nth-child(1), .fat_result dl:nth-child(2){
+    margin-bottom: 16px;
+}
+.fat_result dl:nth-child(odd){
+    margin-left: 0;
+}
+.fat_result dt{
+    padding-top: 18px;
+    padding-bottom: 0;
+}
+
+/*종합결과*/
+.overall_wrap{
+    background: #fff;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 60px 60px 0 60px;
+    width: 100%;
+    margin-top: 30px;
+}
+.body_composition{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 36px 40px 36px 20px;
+}
+.body_composition h2, .blood_pressure_wrap h2{
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+.body_composition li{
+    text-align: center;
+    border-right: 2px solid #d7d7d7;
+    width: 19%;
+}
+.body_composition li.body_size{
+    border-right: 0 none;
+    width: 24%;
+    padding: 10px 20px 0 30px;
+}
+.body_composition .result{
+    font-size: 1.75rem;
+    padding-top: 116px;
+}
+.body_composition .result span{
+    font-size: 1.5rem;
+}
+.body_composition .result.value_low{
+    background: url(../img/icon_value_low.png) top center no-repeat;
+    color: #B472E4;
+}
+.body_composition .result.value_normal{
+    background: url(../img/icon_value_normal.png) top center no-repeat;
+    color: #0E4194;
+}
+.body_composition .result.value_high{
+    background: url(../img/icon_value_high.png) top center no-repeat;
+    color: #E52828;
+}
+.body_composition li.body_size dt{
+    font-size: 1.25rem;
+    text-align: left;
+    padding-top: 20px;
+}
+.body_composition li.body_size dd{
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: right;
+}
+.blood_pressure_wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 30px;
+}
+.blood_pressure .result{
+    padding: 20px 40px 20px 0;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.blood_pressure .result dl{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: end;
+    width: 70%;
+}
+.blood_pressure .result dt{
+    font-size: 1.5rem;
+    width: 25%;
+    padding-bottom: 10px;
+}
+.blood_pressure .result dd{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: right;
+    width: 65%;
+    padding-bottom: 10px;
+}
+.blood_pressure .value{
+    display: inline-block;
+    width: 140px;
+    min-height: 128px;
+    padding-top: 30px;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+}
+.blood_pressure .value.heart_low{
+    background: url(../img/icon_heart_low.png) center center no-repeat;
+}
+.blood_pressure .value.heart_normal{
+    background: url(../img/icon_heart_normal.png) center center no-repeat;
+}
+.blood_pressure .value.heart_high{
+    background: url(../img/icon_heart_high.png) center center no-repeat;
+}
+.overall_result .btn_wrap{
+    position: initial;
+    padding: 10px 0 30px 0;
+}
+.blood_pressure_chart{
+    text-align: center;
+}
+
+/*차트*/
+.chart_wrap{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.chart_box{
+    background: #fff;
+    /* box-shadow: 0 10px 6px 0 rgba(0, 0, 0, 0.08); */
+    border-radius: 20px;
+    padding: 30px 27px;
+    width: calc((100% / 2) - 10px);
+    margin-bottom: 20px;
+}
+.chart_box:nth-child(odd){
+    margin-left: 0px;
+}
+.chart_box h2{
+    font-size: 1.75rem;
+    font-weight: 600;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.chart_box h2 > span{
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: right;
+}
+.chart_bar{
+    background: #E8EAEF;
+    padding: 12px 0;
+}
+.progress{
+    background: linear-gradient(to right, #B472E4, #0E4194);
+    border-radius: 0 60px 60px 0;
+    text-align: right;
+    padding: 5px 15px;
+}
+.progress > em {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #fff;
+    font-style: normal;
+}
+.chart_range > span{
+    font-size: 1.25rem;
+    border-right: 1px solid #DADCE1;
+    display: inline-block;
+    width: 33.3333%;
+    text-align: center;
+}
+.chart_range > span.low{
+    color: #B472E4;
+    border-left: 1px solid #DADCE1;
+}
+.chart_range > span.normal{
+    color: #0E4194;
+}
+.chart_range > span.high{
+    color: #E52828;
+}
+
+/*서버연동*/
+.setting_box{
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    text-align: center;
+    margin: 0 auto;
+    width: 70%;
+    position: relative;
+}
+.setting_box h1{
+    font-size: 2.5rem; 
+}
+.setting_box .desc{
+    font-size: 1.75rem; 
+    padding: 10px 0 20px 0;
+}
+.setting_box .input_wrap{
+    width: 65%;
+    margin: 0 auto;
+}
+.setting_box .input_wrap .input_text{
+    width: 100%;
+}
+.setting_box .input_wrap .input_group{
+    margin: 0;
+}
+.setting_box .input_wrap .label{
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    font-size: 0;
+}
+.setting_box .btn_wrap{
+    position: initial;
+    padding-top: 30px;
+}
+.setting_box.password_wrap{
+    background: #fff url(../img/icon_server_password.png) bottom -25px left -20px no-repeat;
+}
+.setting_box.equipment_wrap{
+    background: #fff url(../img/icon_server_equipment.png) bottom -5px left -105px no-repeat;
+}
+.server_conn h2{
+    font-size: 1.75rem;
+}
+.consonant li, .senior_center_list li > span{
+    cursor: pointer;
+}
+.consonant{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 100px;
+    padding: 8px 20px;
+    margin-bottom: 10px;
+}
+.consonant li{
+    font-size: 2.25rem;
+    font-weight: 600;
+    padding: 10px 15px 9px 15px;
+}
+.consonant li.act{
+    display: inline-block;
+    background: #417FDD;
+    color: #fff;
+    border-radius: 100px;
+}
+.senior_center_list{
+    background: #fff;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    padding: 10px 20px 10px 30px;
+}
+.senior_center_list ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 264px;
+    overflow: auto;
+}
+.senior_center_list li{
+    font-size: 1.5rem;
+    padding: 18px 100px 18px 0;
+}
+.senior_center_list li.inact > span{ 
+    cursor: auto;
+    color: #C1C1C1;
+}
+.senior_center_list li.act > span{
+    color: #fff;
+    background: #0E4194;
+    border-radius: 100px;
+    padding: 10px 28px;
+    /* position: relative; */
+}
+.senior_center_list li.act > span::after{
+    content: url(../img/icon_center_checked.png);
+    display: inline-block;
+    padding-left: 10px;
+    position: relative;
+    top: 0;
+    right: 0px;
+}
+
+/*개인정보관리*/
+.personal_info .contents{
+    height: calc(100% - 54px);
+}
+.personal_info_manage{
+    height: 100%;
+}
+.personal_info_manage ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+    padding-top: 30px;
+}
+.personal_info_manage li{
+    background: linear-gradient(-45deg, #0B4CB5 25%, #B572E4 75%);
+    border-radius: 60px 60px 0 60px;
+    width: calc(100% / 3 - 10px);
+    text-align: center;
+    padding: 120px 20px 0;
+}
+.personal_info_manage h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff;
+}
+.personal_info_manage p{
+    font-size: 1.75rem;
+    color: #fff;
+    text-align: center;
+}
+button.btn_info_manage{
+    background: #fff;
+    color: #0E4194;
+    /* width: 300px; */
+    padding: 20px 60px;
+    margin: 30px 0 0 0;
+}
+.personal_info_list ul{
+    background: #fff;
+    border-radius: 60px 60px 0 60px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.08);
+    width: 70%;
+    margin: 30px auto;
+    padding: 20px 40px;
+}
+.personal_info_list li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #d7d7d7;
+    padding: 30px 0 30px 78px;
+}
+.personal_info_list li:last-child{
+    border-bottom: 0 none;
+}
+.personal_info_list li.info_name{
+    background: url(../img/icon_info_name.png) left 6px center no-repeat;
+}
+.personal_info_list li.info_phone{
+    background: url(../img/icon_info_phone.png) left 8px center no-repeat;
+}
+.personal_info_list li.info_birth{
+    background: url(../img/icon_info_cal.png) left center no-repeat;
+}
+.personal_info_list li > p{
+    font-size: 2.25rem;
+    font-weight: 600;
+    text-align: left;
+}
+button.btn_info_edit{
+    background: #417FDD;
+    color: #fff;
+    /* width: 300px; */
+    padding: 15px 60px;
+}
+.personal_info_edit{
+    margin-top: 30px;
+}
+.personal_info_edit .input_wrap.name_input{
+    width: 63%;
+    padding-top: 40px;
+}
+.personal_info_edit .input_wrap{
+    width: 50%;
+    padding-top: 20px;
+}
+
+/*회원탈퇴*/
+.unregister .guide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 15px 0;
+}
+.unregister .guide p{
+    font-size: 1.75rem;
+    font-weight: 600;
+    background: url(../img/icon_warning.png) left center no-repeat;
+    padding: 20px 0 20px 94px;
+}
+.unregister .guide p + p{
+    background: none;
+    padding: 0;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.5;
+}
+.unregister .input_wrap{
+    width: 50%;
+    padding-top: 20px;
+}
+.unregister_wrap{
+    display: flex;
+    flex-direction: column;
+}
+.unregister .input_textarea{
+    width: 70%;
+    height: 193px;
+    margin: 0 auto;
+}
+
+/*태블릿설정*/
+.total_setting .contents{
+    height: calc(100% - 54px);
+}
+.total_setting_wrap{
+    height: 100%;
+}
+.total_setting_wrap ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+    padding-top: 30px;
+}
+.total_setting_wrap li{
+    width: calc(100% / 3 - 10PX);
+    margin: 0;
+    padding: 0;
+}
+.total_setting_wrap li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.total_setting_wrap li span{
+    font-size: 2.5rem;
+    font-weight: 600;
+    position: relative;
+    top: 25%;
+}
+.setting_menu_update .update_desc{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.total_setting_wrap li.setting_menu_server{
+    background: #fff url(../img/icon_setting_server.png) top 58% center no-repeat;
+}
+.total_setting_wrap li.setting_menu_connect{
+    background: #fff url(../img/icon_setting_connect.png) top 58% center no-repeat;
+}
+.total_setting_wrap li.setting_menu_update{
+    background: #fff url(../img/icon_setting_update.png) top 58% center no-repeat;
+}
+button.btn_update{
+    background: #417fdd;
+    padding: 19px 50px;
+    position: relative;
+    top: 21%;
+}
+.total_setting_info{
+    padding-top: 30px;
+}
+.total_setting_info dl{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 40px;
+}
+.total_setting_info dt{
+    font-size: 1.75rem;
+    color: #696969;
+    width: 30%;
+    text-align: left;
+}
+.total_setting_info dd{
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: right;
+    width: 70%;
+}
+.total_setting_info dt, .total_setting_info dd{
+    border-bottom: 2px solid #d7d7d7;
+    padding: 25px 0;
+}
+.total_setting_info dt:last-of-type, .total_setting_info dd:last-of-type{
+    border-bottom: 0 none;
+}
+.connection_state{
+    height: 100%;
+    padding-top: 30px;
+}
+.connection_state ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+}
+.connection_state ul > li{
+    width: calc(100% / 2 - 10px);
+    margin: 0;
+    padding: 80px 40px;
+}
+.connection_state h2{
+    font-size: 2rem;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+.equipment_info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 175px;
+}
+.equipment_info ul{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+.connection_state ul > li .equipment_info li{
+    text-align: left;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 10px;
+}
+.connect_info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.connect_info p{
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: url(../img/icon_connection.png) left center no-repeat;
+    padding: 22px 0 22px 94px;
+}
+.disconnection .connect_info p{
+    background: url(../img/icon_disconnection.png) left center no-repeat;
+}
+button.btn_connect{
+    background: #417FDD;
+    padding: 15px 90px;
+}
+.total_setting .take_order_wrap{
+    height: calc(100% - 70px);
+}
+.total_setting .take_order_wrap ol{
+    padding-top: 20px;
+}
+.total_setting .take_order_wrap li{
+    width: calc(100% / 4 - 10px);
+    border-radius: 20px;
+}
+.total_setting .take_order_wrap .method > strong{
+    font-size: 1.5rem;
+    border-bottom: 0 none;
+    margin-bottom: 0;
+}
+.total_setting button.btn_connect{
+    padding: 15px 60px;
+}
+.heart_connect_order li.list01{
+    background: #fff url(../img/img_heart_conn01.png) bottom 123px center no-repeat;
+}
+.heart_connect_order li.list02{
+    background: #fff url(../img/img_heart_conn02.png) bottom 30px center no-repeat;
+}
+.heart_connect_order li.list03{
+    background: #fff url(../img/img_heart_conn03.png) bottom 106px center no-repeat;
+}
+
+/*팝업*/
+.popup_wrap{
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 30px;
+    display: flex;
+    z-index: 2;
+}
+.popup{
+    width: 100%;
+    max-width: 600px;
+    min-height: 300px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 40px 30px 0 rgba(0, 0, 0, 0.17);
+    padding: 30px;
+    position: relative;
+}
+.popup button{
+    font-size: 1.75rem;
+    border-radius: 7px;
+    padding: 13px 20px 14px 20px;
+    font-weight: 600;
+    min-width: 120px;
+    margin: 0 4px;
+    color: #fff;
+    background: #0E4194;
+}
+button.btn_popup_cancle, button.btn_popup_close{
+    background: #66686B;
+}
+button.btn_popup_confirm, button.btn_popup_recheck{
+    background: #2D3034;
+}
+button.btn_popup_close{
+    width: 29px;
+    height: 29px;
+    background: url(../img/btn_popup_close.png) center center no-repeat;
+    display: inline-block;
+    text-indent: -99999px;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+    padding: 0;
+    min-width: auto;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+.popup_footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.popup_contents{
+    text-align: center;
+    padding: 30px;
+    min-height: 230px;
+}
+.popup_contents p.warning::before{
+    content: '';
+    display: block;
+    background: url(../img/icon_warning.png) center top no-repeat;
+    width: 100%;
+    height: 74px;
+    padding-bottom: 30px;
+}
+.popup_contents p.confirm::before{
+    content: '';
+    display: block;
+    background: url(../img/icon_confirm.png) center top no-repeat;
+    width: 100%;
+    height: 74px;
+    padding-bottom: 30px;
+}
+.popup_contents p.text{
+    font-size: 1.7rem;
+    line-height: 36px;
+}
+.popup_contents p.text strong{
+    font-size: 1.92rem;
+    display: block;
+}
+.popup.terms_contents{
+    max-width: 830px;
+}
+.popup.terms_contents .popup_contents{
+    text-align: left;
+    padding: 0 0 30px 0;
+}
+.popup_contents h1{
+    font-size: 2rem;
+    padding: 27px 0 20px 0;
+}
+.popup_contents textarea{
+    width: 726px;
+    height: 260px;
+}
+.popup.result_contents{
+    max-width: 830px;
+}
+.popup.result_contents .popup_contents{
+    padding: 0 0 30px 0;
+}
+
+@media screen and (min-width:1281px){/*1280보다 커질 때*/
+    button.btn_basic{
+        font-size: 2.5rem;
+        padding: 20px 80px 21px 80px;
+    }
+    .main .contents .menu > span{
+        font-size: 3.75rem;
+    }
+    .main .contents .login_wrap .btn_group button{
+        padding: 25px 0;
+        font-size: 2.5rem;
+    }
+    .title{
+        height: 80px;
+    }
+    .title h1{
+        font-size: 3.75rem;
+    }
+    button.btn_gomain{
+        height: 80px;
+        font-size: 1.8rem;
+        padding: 0 40px;
+    }
+    .connect_state .no_connect{
+        padding-top: 66%;
+        font-size: 2rem;
+    }
+    .contents h2, .label{
+        font-size: 2.5rem;
+    }
+    .login.contents{
+        height: calc(100% - 80px);
+    }
+    .login_menu > span, .login_menu_join strong{
+        font-size: 3.75rem;
+    }
+    .login_menu_join > span{
+        font-size: 2.5rem;
+    }
+    input[type="text"], input[type="password"], .input_group div.input_text{
+        padding: 33px 60px 33px 30px;
+    }
+    .desc{
+        font-size: 1.75rem;
+    }
+    button.btn_delete_text{
+        top: 39px;
+    }
+    .keypad button.number{
+        padding: 12px 0;
+        font-size: 3.25rem;
+    }
+    .step li{
+        font-size: 2rem;
+        height: 100px;
+        line-height: 100px;
+    }
+    .step li > strong{
+        width: 100px;
+        height: 100px;
+        font-size: 2.5rem;
+    }
+    .agree_all p{
+        font-size: 2rem;
+    }
+    .terms_type{
+        padding: 45px;
+    }
+    .terms_type p{
+        font-size: 2rem;
+    }
+    .terms_type label, button.terms_view{
+        font-size: 1.75rem;
+    }
+    button.btn_certification{
+        font-size: 1.75rem;
+        padding: 29px 0px;
+        width: 230px;
+    }
+    .input_group .timer{
+        font-size: 1.5rem;
+        top: 34px;
+    }
+    .gender_choice input[type=radio]+label{
+        width: 200px;
+        height: 100px;
+        line-height: 100px;
+        font-size: 1.75rem;
+    }
+    .gender_choice input[type=radio]:checked+label{
+        background-position: right 35px top 39px;
+    }
+    .completed p{
+        font-size: 2.5rem;
+    }
+    .completed .info{
+        font-size: 2.25rem;
+        padding: 60px 42px 60px 380px;
+        background-position: left 140px center;
+    }
+    .completed .info li{
+        height: 62px;
+        line-height: 62px;
+    }
+    .face_reg_guide{
+        width: 41%;
+    }
+    .face_reg_guide p{
+        padding: 80px 243px 80px 20px;
+    }
+    .face_reg img{
+        width: 1100px;
+    }
+    .take_order_wrap .method > strong{
+        font-size: 2.5rem;
+    }
+    .take_order_wrap .method p{
+        font-size: 1.75rem;
+    }
+    .heart_take_order li.list01{
+        background: #fff url(../img/img_heart01_x1.5.png) bottom 30px right 30px no-repeat;
+    }
+     .heart_take_order li.list02{
+        background: #fff url(../img/img_heart02_x1.5.png) bottom 50px right 30px no-repeat;
+    }
+     .heart_take_order li.list03{
+        background: #fff url(../img/img_heart03_x1.5.png) bottom 50px right 30px no-repeat;
+    }
+    .fat_take_order li.list01{
+        background: #fff url(../img/img_fat01_x1.5.png) bottom 30px right 30px no-repeat;
+    }
+    .fat_take_order li.list02{
+        background: #fff url(../img/img_fat02_x1.5.png) bottom 30px right 30px no-repeat;
+    }
+    .fat_take_order li.list03{
+        background: #fff url(../img/img_fat03_x1.5.png) top 90px center no-repeat;
+    }
+    .fat_take_order li.list04{
+        background: #fff url(../img/img_fat04_x1.5.png) bottom 30px right 30px no-repeat;
+    }
+    .fat_take_order ol.pose li{
+        font-size: 1.75rem;
+    }
+     .fat_take_order ol.pose li.pose01{
+        top: 183px;
+       left: 33px;
+    }
+    .fat_take_order ol.pose li.pose02{
+        top: 116px;
+        right: 72px;
+    }
+    .fat_take_order ol.pose li.pose03{
+        top: 325px;
+       left: 69px;
+    }
+    .fat_take_order ol.pose li.pose04{
+        top: 264px;
+        right: 62px;
+    }
+    .fat_take_order ol.pose li.pose05{
+        top: 512px;
+       left: 49px;
+    }
+    .fat_take_order ol.pose li.pose06{
+        top: 545px;
+        right: 54px;
+    }
+    .body_composition li.body_size dt{
+        font-size: 1.75rem;
+    }
+    .body_composition li.body_size dd{
+        font-size: 2.5rem;
+    }
+    .blood_pressure .result dt{
+        font-size: 1.75rem;
+    }
+    .blood_pressure .result dd{
+        font-size: 2.5rem;
+    }
+    .chart_box h2{
+        font-size: 1.75rem;
+    }
+    .consonant li{
+        font-size: 3rem;
+    }
+    .senior_center_list ul{
+        height: 40vh;
+    }
+    .senior_center_list li{
+        font-size: 2rem;
+    }
+    .personal_info_manage li{
+        padding-top: 180px;
+    }
+    .personal_info_manage h2{
+        font-size: 3.75rem;
+    }
+    .personal_info_manage p{
+        font-size: 2.5rem;
+    }
+    .personal_info_list li > p{
+        font-size: 2.75rem;
+    }
+    .unregister .guide p{
+        font-size: 2.5rem;
+    }
+    .unregister .input_textarea{
+        height: 31vh;
+        font-size: 1.75rem;
+        line-height: 1.5;
+    }
+    .total_setting_wrap li span{
+        font-size: 3.75rem;
+    }
+    .setting_menu_update .update_desc{
+        font-size: 2.75rem;
+    }
+    .total_setting_info dd{
+        font-size: 2.75rem;
+    }
+    .total_setting_info dt{
+        font-size: 2rem;
+    }
+    .total_setting_info dt, .total_setting_info dd{
+        padding: 35px 0;
+    }
+    .connection_state h2{
+        font-size: 3.75rem;
+        padding-bottom: 30px;
+    }
+    .connection_state ul > li .equipment_info li{
+        font-size: 2.5rem;
+    }
+    .connect_info p{
+        font-size: 2.5rem;
+    }
+    .total_setting .take_order_wrap .method > strong{
+        font-size: 2.5rem;
+    }
+    .heart_connect_order li.list01{
+        background: #fff url(../img/img_heart_conn01_x1.5.png) bottom 177px center no-repeat;
+    }
+    .heart_connect_order li.list02{
+        background: #fff url(../img/img_heart_conn02_x1.5.png) bottom 30px center no-repeat;
+    }
+    .heart_connect_order li.list03{
+        background: #fff url(../img/img_heart_conn03_x1.5.png) bottom 156px center no-repeat;
+    }
+}
+@media screen and (max-width:720px){/*720보다 작아질 때*/
+    .contents_wrap{
+        padding: 20px;
+    }
+    button.btn_basic{
+        font-size: 1.4rem;
+        padding: 13px 40px 12px 40px;
+    }
+    header .private_info .btn_logout{
+        margin: 10px 0;
+    }
+    .main .contents .login_wrap p, .main .contents .login_wrap.after p{
+        font-size: 1.25rem;
+        line-height: 32px;
+    }
+    .main .contents .login_wrap p>span{
+        padding-bottom: 12px;
+    }
+    .connect_state .no_connect{
+        padding-top: 46vh;
+        font-size: 1.25rem;
+    }
+    button.btn_gomain{
+        padding: 0 20px;
+    }
+    .main .contents .login_wrap{
+        margin: 100px 20px 0 10px;
+    }
+    .main .contents .menu > span{
+        font-size: 2.5rem;
+    }
+    .login_menu_join > span{
+        top: 20%;
+        font-size: 1.25rem;
+    }
+    .input_group .input_text{
+        padding: 17px 30px 17px 15px;
+    }
+    .label{
+        font-size: 1.5rem;
+    }
+    .input_group .value{
+        font-size: 1rem;
+    }
+    button.btn_delete_text{
+        top: 19px;
+        right: 15px;
+    }
+    .desc{
+        font-size: 1.25rem;
+        padding-top: 10px;
+    }
+    .agree_all p{
+        font-size: 1.5rem;
+    }
+    label{
+        font-size: 1.25rem;
+    }
+    .step ol{
+        flex-wrap: wrap;
+    }
+    .step li{
+        flex: 1 1 40%;
+        margin-bottom: 10px;
+    }
+    .step li:nth-child(2){
+        margin-right: 0;
+    }
+    .terms_type p{
+        font-size: 1.25rem;
+    }
+    button.terms_view{
+        font-size: 1.25rem;
+        padding: 12px 30px;
+    }
+    .join_wrap .input_wrap{
+        padding-top: 0;
+    }
+    .certification_group .input_group{
+        width: 100%;
+    }
+    button.btn_certification{
+        font-size: 1.25rem;
+        padding: 14px 18px 15px 18px;
+    }
+    .input_group .timer{
+        top: 15px;
+        right: 15px;
+    }
+    .input_wrap.name_input{
+        width: 100%;
+        padding: 30px 50px;
+    }
+    .name_input .input_text{
+        width: 100%;
+        min-height: 20px;
+        font-size: 1rem;
+    }
+    input::placeholder{
+        font-size: 1rem;
+    }
+    .gender_choice .label{
+        margin-bottom: 10px;
+    }
+    .join_step04 .desc{
+        padding-top: 0;
+    }
+    .completed .info{
+        width: 100%;
+        padding: 30px 50px;
+        background-position: right 50px center;
+    }
+    .popup_contents textarea{
+        width: -webkit-fill-available;
+    }
+    .face_reg_guide{
+        width: 98%;
+    }
+    .face_reg img{
+        width: 670px;
+    }
+    .heart_result dd, .fat_result dd{
+        font-size: 2.5rem;
+    }
+    .take_order_wrap .method > strong{
+        font-size: 1.5rem;
+    }
+    .heart_take_order li{
+        padding: 60px 20px 0 20px;
+    }
+    .heart_take_order li.list01 .method p + p{
+        padding-right: 0;
+    }
+    .fat_take_order li{
+        padding: 60px 20px 0 20px;
+    }
+    .fat_take_order li.list01 p, .fat_take_order li.list02 p{
+        padding-right: 0;
+    }
+    .take_order_wrap ol.pose{
+        flex-direction: column;
+        padding-top: 155%;
+        padding-left: 10px;
+    }
+    .fat_take_order ol.pose li{
+        width: auto;
+        text-align: left;
+        position: initial;
+        list-style-type: decimal;
+        padding-bottom: 10px;
+    }
+    .fat_take_order ol.pose li.pose01, .fat_take_order ol.pose li.pose03, .fat_take_order ol.pose li.pose05{
+        text-align: left;
+    }
+    .body_composition{
+        padding: 36px 15px 36px 15px;
+    }
+    .body_composition li.body_size{
+        padding: 10px 0 0 20px;
+    }
+    .blood_pressure_wrap{
+        flex-direction: column;
+    }
+    .blood_pressure .result{
+        padding: 0px 0 40px 0px;
+    }
+    .chart_box{
+        width: 100%;
+    }
+    .setting_box{
+        width: 100%;
+    }
+    .consonant{
+        justify-content: center;
+    }
+    .senior_center_list li{
+        padding-right: 60px;
+    }
+    .personal_info_list p{
+        font-size: 1.25rem;
+    }
+    .personal_info_edit .input_wrap.name_input{
+        width: 100%;
+    }
+    .personal_info_edit .input_wrap{
+        padding-top: 0;
+    }
+    .personal_info_list ul{
+        width: 100%;
+    }
+    .personal_info_list li > p{
+        font-size: 2rem;
+    }
+    .unregister .input_wrap{
+        padding-top: 0;
+    }
+    .unregister .input_textarea{
+        width: 93%;
+    }
+    button.btn_update{
+        padding: 19px 20px;
+        top: 25%;
+    }
+    .connection_state ul > li{
+        padding: 40px 20px;
+    }
+    .equipment_info{
+        flex-direction: column;
+    }
+    .total_setting button.btn_connect{
+        padding: 15px;
+    }
+}

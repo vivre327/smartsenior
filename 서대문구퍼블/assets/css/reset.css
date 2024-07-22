@@ -1,0 +1,134 @@
+:root {
+    --green : #008b4f;
+    --lignt-green: #00b969;
+    --orange: #ed7117;
+    --light-orange: #f39800;
+    --blue: #0E4194;
+    --light-blue: #417FDD;
+    --gradient: linear-gradient(315deg, rgba(12,136, 177, 1) 0%, rgba(14,184,107,1) 90%);
+    --height-header : 80px;
+}
+@font-face {
+    font-family:'NanumSquare';
+    font-style:normal;
+    font-weight:300;
+    src:url('../fonts/NanumSquareL.woff') format('woff');
+}
+@font-face {
+    font-family:'NanumSquare';
+    font-style:normal;
+    font-weight:400;
+    src:url('../fonts/NanumSquareR.woff') format('woff');
+}
+@font-face {
+    font-family:'NanumSquare';
+    font-style:normal;
+    font-weight:700;
+    src:url('../fonts/NanumSquareB.woff') format('woff');
+}
+@font-face {
+    font-family:'NanumSquare';
+    font-style:normal;
+    font-weight:800;
+    src:url('../fonts/NanumSquareEB.woff') format('woff');
+}
+
+html, body{
+    width: 100%;
+    height: 100vh;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	/* font-size: 100%;
+	font: inherit; */
+	vertical-align: baseline;
+    box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html{
+    font-size: 16px;
+}
+body {
+	line-height: 1.25;
+    font-family: 'NanumSquare', 'Malgun Gothic', '맑은 고딕', sans-serif;
+    background: #f1f5f8;
+    font-size: 100%;
+    font-weight: 400;
+    color: #1d1d1d;
+    letter-spacing: -2px;
+    min-height: 100vh;
+}
+ul, ol, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img {
+    border: 0;
+    object-fit: cover;
+    max-width: 100%;
+}
+legend {
+    position:absolute;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999em;
+    overflow: hidden;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+    color: #1d1d1d;
+}
+a:hover {
+    text-decoration: none;
+}
+button{
+    border: 0 none;
+    outline: 0 none;
+    font-family: 'NanumSquare', sans-serif;
+    letter-spacing: -2px;
+    -webkit-tap-highlight-color : transparent !important;
+    cursor: pointer;
+}
+input{
+    vertical-align: middle;
+    outline: none;
+}
+*:focus{
+    outline: none;
+}

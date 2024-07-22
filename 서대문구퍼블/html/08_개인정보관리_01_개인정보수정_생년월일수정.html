@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920">
+    <title>생년월일/성별 수정</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+    <div class="wrap">
+
+    <header class="header">
+      <div class="header_inner">
+        <h1 class="logo">
+          <span class="ci">서대문구</span>
+          <b>스마트 경로당</b>
+        </h1>
+        <div class="header_date">
+          <span class="hd_date">2024.04.30</span>
+          <span class="hd_time">오전<b>09:00</b></span>
+        </div>
+      </div>
+    </header>
+
+        <!--컨텐츠영역-->
+        <div class="contents_wrap personal_info">
+            <!--타이틀영역-->
+            <section class="title">
+                <button class="btn_gomain btn_basic">처음으로</button>
+                <h1>생년월일/성별 수정</h1>
+            </section>
+            <!--//타이틀영역-->
+
+            <div class="contents">
+                <section class="personal_info_edit">
+                    <div class="keypad_group">
+                        <div class="input_wrap">
+                            <span class="label">생년월일</span>
+                            <div class="input_group value_normal">
+                                <div class="input_text"><span class="value">19500714</span><button class="btn_delete_text">지우기</button></div>
+                            </div>
+                            <span class="desc">생년월일을 숫자 8자로 입력해주세요.<Br />(1950년 1월 1일의 경우 19500101로 입력)</span>
+                            <div class="gender_choice">
+                                <span class="label">성별 선택</span>
+                                <input type="radio" class="input_radio" id="female" name="fm"/><label for="female">여자</label>
+                                <input type="radio" class="input_radio" id="male" name="fm" checked /><label for="male">남자</label>
+                            </div>
+                        </div>  
+                        <div class="keypad">
+                            <div class="number_group">
+                                <button class="number">1</button>
+                                <button class="number">2</button>
+                                <button class="number">3</button>
+                                <button class="number">4</button>
+                                <button class="number">5</button>
+                                <button class="number">6</button>
+                                <button class="number">7</button>
+                                <button class="number">8</button>
+                                <button class="number">9</button>
+                                <button class="number">0</button>
+                                <button class="number">010</button>
+                                <button class="delete_one">한 칸 지우기</button>
+                                <button class="delete_all">전체 지우기</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="btn_wrap">
+                    <button class="btn_cancle btn_basic">취소</button>
+                    <button class="btn_edit btn_basic">수정</button>
+                </section>
+            </div><!--//cotents-->
+        </div><!--//contents_wrap-->
+        <!--//컨텐츠영역-->
+
+    </div><!--//wrap-->
+</body>
+</html>

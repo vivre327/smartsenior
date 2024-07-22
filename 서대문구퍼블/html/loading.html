@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920">
+  <title>서대문구 스마트 경로당</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- 
+
+    loading style 수정 부분 
+
+  -->
+  <style type="text/css">
+    .loading-mask[data-v-5d8ad17c] {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 1001;
+      /* 2024 수정 ↓ */
+      background-color: rgba(0, 0, 0, 0.35);
+    }
+
+    .loading-bar[data-v-5d8ad17c] {
+      position: fixed;
+      top: 48%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2000;
+      border-radius: 8px;
+      text-align: center;
+      /* 2024 수정 ↓ */
+      padding: 5px;
+      width: 140px;
+      height: 140px;
+      background-color: #fff;
+    }
+
+    .loading-bar-img[data-v-5d8ad17c] {
+      display: inline-block;
+      background: url(https://dev-svc-ganghwa.smartsenior.care/img/loading.586fe0cc.gif);
+      /* 2024 수정 ↓ */
+      width: 130px;
+      height: 130px;
+      background-size: 130px 130px;
+      background-repeat: no-repeat;
+    }
+
+    .loading-text[data-v-5d8ad17c] {
+      display: inline-block;
+      width: 100%;
+      margin-top: 4px;
+      text-align: center;
+      font-size: 11px;
+      color: #ddd;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app" class="wrap">
+    <header class="header">
+      <div class="header_inner">
+        <h1 class="logo">
+          <span class="ci">서대문구</span>
+          <b>스마트 경로당</b>
+        </h1>
+        <div class="header_date">
+          <span class="hd_date">2024.04.30</span>
+          <span class="hd_time">오전<b>09:00</b></span>
+        </div>
+      </div>
+    </header>
+    <!-- s: contents_wrap -->
+    <div class="wrapper">
+      <main class="container">
+        <section class="title"><button type="button" class="btn_gomain btn_basic"> 처음으로 </button>
+          <h1>혈당 측정</h1>
+        </section>
+      </main>
+    </div>
+    <!-- e: contents_wrap -->
+    <!-- Loading Bar -->
+    <div style="display: ;">
+      <div class="loading-mask" data-v-5d8ad17c="">
+        <p class="loading-bar" data-v-5d8ad17c=""><span class="loading-bar-img"
+            data-v-5d8ad17c=""></span><!--<span class="loading-text">Loading</span>--></p>
+      </div>
+    </div>
+    <!-- Modals Container -->
+  </div>
+</body>
+
+</html>

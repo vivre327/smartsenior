@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'Noto Sans';
+	font-weight: 700;
+    src: local('Noto Sans'),
+	    url('../fonts/NotoSansCJKkr-Black.woff2') format('woff2'),
+	    url('../fonts/NotoSansCJKkr-Black.woff') format('woff'),
+        url('../fonts/NotoSansCJKkr-Black.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Noto Sans';
+	font-weight: 600;
+    src: local('Noto Sans'),
+	    url('../fonts/NotoSansCJKkr-Bold.woff2') format('woff2'),
+	    url('../fonts/NotoSansCJKkr-Bold.woff') format('woff'),
+        url('../fonts/NotoSansCJKkr-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Noto Sans';
+	font-weight: 500;
+    src: local('Noto Sans'),
+        url('../fonts/NotoSansCJKkr-Medium.woff2') format('woff2'),
+	    url('../fonts/NotoSansCJKkr-Medium.woff') format('woff'),
+        url('../fonts/NotoSansCJKkr-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Noto Sans';
+	font-weight: 400;
+    src: local('Noto Sans'),
+	    url('../fonts/NotoSansCJKkr-Regular.woff2') format('woff2'),
+	    url('../fonts/NotoSansCJKkr-Regular.woff') format('woff'),
+        url('../fonts/NotoSansCJKkr-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Noto Sans';
+	font-weight: 300;
+    src: local('Noto Sans'),
+	    url('../fonts/NotoSansCJKkr-DemiLight.woff2') format('woff2'),
+	    url('../fonts/NotoSansCJKkr-DemiLight.woff') format('woff'),
+        url('../fonts/NotoSansCJKkr-DemiLight.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Noto Sans';
+	font-weight: 200;
+    src: local('Noto Sans'),
+	    url('../fonts/NotoSansCJKkr-Light.woff2') format('woff2'),
+	    url('../fonts/NotoSansCJKkr-Light.woff') format('woff'),
+        url('../fonts/NotoSansCJKkr-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Noto Sans';
+	font-weight: 100;
+    src: local('Noto Sans'),
+	    url('../fonts/NotoSansCJKkr-Thin.woff2') format('woff2'),
+	    url('../fonts/NotoSansCJKkr-Thin.woff') format('woff'),
+        url('../fonts/NotoSansCJKkr-Thin.ttf') format('truetype');
+}
+html, body{
+    width: 100%;
+    height: 100vh;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	/* font-size: 100%;
+	font: inherit; */
+	vertical-align: baseline;
+    box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.25;
+    font-family: 'Noto Sans', 'Malgun Gothic', '맑은 고딕', sans-serif;
+    background: #E8EAF1;
+    font-size: 100%;
+    font-weight: 500;
+    color: #1d1d1d;
+    letter-spacing: -2px;
+    min-height: 100vh;
+}
+ul, ol, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img {
+    border: 0;
+    object-fit: cover;
+    max-width: 100%;
+}
+legend {
+    position:absolute;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999em;
+    overflow: hidden;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+    color: #1d1d1d;
+}
+a:hover {
+    text-decoration: none;
+}
+button{
+    border: 0 none;
+    outline: 0 none;
+    font-family: 'Noto Sans', sans-serif;
+    letter-spacing: -2px;
+    -webkit-tap-highlight-color : transparent !important;
+    cursor: pointer;
+}
+input{
+    vertical-align: middle;
+    outline: none;
+}
+*:focus{
+    outline: none;
+}
