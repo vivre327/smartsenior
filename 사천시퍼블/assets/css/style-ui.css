@@ -205,8 +205,8 @@ body {
   display: inline-block;
   vertical-align: middle;
   width: 173px;
-  height: 70px;
-  background: url("../images/icon/logo.svg") 0 0 / 173px auto no-repeat;
+  height: 64px;
+  background: url("../images/icon/logo.svg") 0 0 / 172px auto no-repeat;
   font-size: 0;
 }
 .header_inner .logo b {
@@ -215,6 +215,7 @@ body {
   padding-left: 10px;
   font-size: 40px;
   font-weight: 800;
+  line-height: 1;
   color: #5672ed;
 }
 .header_date {
@@ -350,17 +351,17 @@ body {
   display: block;
   text-align: center;
   width: 430px;
-  height: 410px;
+  height: 267px;
   border-radius: 60px;
   background: rgb(88, 94, 191);
-  background: linear-gradient(
-    315deg,
-    rgba(88, 94, 191, 1) 0%,
-    rgba(184, 115, 243, 1) 100%
-  );
+  background: linear-gradient(131.2deg, #B873F3 5.04%, #585EBF 100%);
+  
   overflow: hidden;
   border: 0;
   padding: 0;
+}
+.main_menu_link.full {
+  width: 100%;
 }
 .main_menu_link .link_disabled_mask {
   position: absolute;
@@ -368,42 +369,45 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .link_disabled_mask span {
-  color: #fff;
-  font-size: 32px;
-  line-height: 44px;
-  font-weight: 700;
   display: flex;
-  align-self: center;
-  flex-direction: column;
-  margin-top: 163px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #fff;
+  font-size: 30px;
+  line-height: 42px;
+  font-weight: 800;
   letter-spacing: -2px;
 }
 .main_menu_link figure {
-  width: 210px;
-  height: 210px;
+  width: 120px;
+  height: 120px;
   margin: 0px auto;
-  background-size: 210px;
+  background-size: 120px;
 }
 figure.fig_01 {
-  background-image: url("../images/icon/btn01.svg");
+  background-image: url("../images/icon/btn01.png");
 }
 figure.fig_02 {
-  background-image: url("../images/icon/btn02.svg");
+  background-image: url("../images/icon/btn02.png");
 }
 figure.fig_03 {
-  background-image: url("../images/icon/btn03.svg");
+  background-image: url("../images/icon/btn03.png");
 }
 figure.fig_04 {
-  background-image: url("../images/icon/btn04.svg");
+  background-image: url("../images/icon/btn04.png");
+}
+figure.fig_05 {
+  background-image: url("../images/icon/btn05.png");
 }
 .main_menu_link .mml_txt {
-  margin: 8px auto 20px;
+  margin: 16px auto 0;
   display: block;
   color: #fff;
-  font-size: 48px;
+  font-size: 42px;
   line-height: 1;
   letter-spacing: -2px;
   font-weight: 800;
