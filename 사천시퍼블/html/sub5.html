@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920" />
+    <title>사천시 스마트경로당</title>
+    <link rel="stylesheet" href="../assets/css/style-ui.css" />
+  </head>
+  <body>
+    <div class="wrapper dashboard">
+      <header class="header">
+        <div class="header_inner">
+          <h2 class="header_title">사천시 스마트 경로당</h2>
+        </div>
+      </header>
+      <main class="container">
+        <!-- 장비상태 -->
+        <section class="equipment_area panel">
+          <h3 class="section_title">장비상태</h3>
+          <article class="summary_item">
+            <ul class="summary_list">
+              <li>
+                <span class="summary_name">키오스크</span>
+                <div class="summary_status">
+                  <span class="status_dot active">50</span>
+                  <span class="status_dot error">0</span>
+                </div>
+              </li>
+              <li>
+                <span class="summary_name">종합정보단말</span>
+                <div class="summary_status">
+                  <span class="status_dot active">50</span>
+                  <span class="status_dot error">0</span>
+                </div>
+              </li>
+            </ul>
+          </article>
+          <div class="box_grid">
+            <!-- 
+              [레이아웃에서 표시 가능한 최대 개수]
+              1. box_item : 최대 14개
+              2. row_item : 최대 50개
+            -->
+            <article class="box_item">
+              <h4 class="box_tit">사천읍</h4>
+              <ul class="row_list">
+                <li class="row_item">
+                  <!-- 경로당명 최대 6자리 개발 필요 -->
+                  <span class="row_name">선인1리</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">정의1리</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">수석6리</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">사주1리</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">수석2리</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+              </ul>
+            </article>
+            <article class="box_item">
+              <h4 class="box_tit">사남면</h4>
+              <ul class="row_list">
+                <li class="row_item">
+                  <span class="row_name">도동</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">병둔</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">유천</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">초전</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">한주빌라트</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+              </ul>
+            </article>
+            <article class="box_item">
+              <h4 class="box_tit">축동면</h4>
+              <ul class="row_list">
+                <li class="row_item">
+                  <span class="row_name">예동</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">신기</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+              </ul>
+            </article>
+            <article class="box_item">
+              <h4 class="box_tit">곤명면</h4>
+              <ul class="row_list">
+                <li class="row_item">
+                  <span class="row_name">원전</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">은사</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">장신</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">조장</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+              </ul>
+            </article>
+            <article class="box_item">
+              <h4 class="box_tit">동서동</h4>
+              <ul class="row_list">
+                <li class="row_item">
+                  <span class="row_name">실안노모당</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">늑도</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">대방</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+              </ul>
+            </article>
+            <article class="box_item">
+              <h4 class="box_tit">동서금동</h4>
+              <ul class="row_list">
+                <li class="row_item">
+                  <span class="row_name">한주비치</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">삼천포예미지</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+              </ul>
+            </article>
+            <article class="box_item">
+              <h4 class="box_tit">향촌동</h4>
+              <ul class="row_list">
+                <li class="row_item">
+                  <span class="row_name">모례</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">서향</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">봉전노모당</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+              </ul>
+            </article>
+            <article class="box_item">
+              <h4 class="box_tit">정동면</h4>
+              <ul class="row_list">
+                <li class="row_item">
+                  <span class="row_name">고읍</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">대곡</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">동계</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">수청</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">노천</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+              </ul>
+            </article>
+            <article class="box_item">
+              <h4 class="box_tit">용현면</h4>
+              <ul class="row_list">
+                <li class="row_item">
+                  <span class="row_name">온정</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">동강</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">평기</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">신송</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+              </ul>
+            </article>
+            <article class="box_item">
+              <h4 class="box_tit">곤양면</h4>
+              <ul class="row_list">
+                <li class="row_item">
+                  <span class="row_name">무고</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">안도</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">수동</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">삼동</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">상정</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+              </ul>
+            </article>
+            <article class="box_item">
+              <h4 class="box_tit">서포면</h4>
+              <ul class="row_list">
+                <li class="row_item">
+                  <span class="row_name">대포</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">다맥</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">중촌</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+              </ul>
+            </article>
+            <article class="box_item">
+              <h4 class="box_tit">선구동</h4>
+              <ul class="row_list">
+                <li class="row_item">
+                  <span class="row_name">새동네</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">통선</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+              </ul>
+            </article>
+            <article class="box_item">
+              <h4 class="box_tit">벌용동</h4>
+              <ul class="row_list">
+                <li class="row_item">
+                  <span class="row_name">중앙</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">용강대경파미</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">서희스타힐스</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+              </ul>
+            </article>
+            <article class="box_item">
+              <h4 class="box_tit">남양동</h4>
+              <ul class="row_list">
+                <li class="row_item">
+                  <span class="row_name">중촌</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">대례</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">송천</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+                <li class="row_item">
+                  <span class="row_name">심포</span>
+                  <div class="row_status">
+                    <span class="status_dot active"></span>
+                    <span class="status_dot active"></span>
+                  </div>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <!-- 지도 API -->
+        <section class="map_area h100">
+          <!-- 지도 영역 비율 선택하여 사용
+            1. map_area : 높이 834px
+            2. map_area h100 : 높이 100%
+          -->
+          <img src="../assets/images/pic/map_sample.png" class="sample_img" />
+          <!-- <div id="map" style="width: 100%; height: 100%"></div> -->
+        </section>
+
+        <!-- 화상회의 참석 경로당 -->
+        <section class="attendees_area panel">
+          <h3 class="section_title">화상회의 참석 경로당</h3>
+          <article class="summary_item">
+            <span class="summary_name">51개 경로당 참석 중</span>
+          </article>
+          <ul class="dot_list">
+            <li>사천읍 선인1리</li>
+            <li>사천읍 정의1리</li>
+            <li>사천읍 수석6리</li>
+            <li>사천읍 사주1리</li>
+            <li>사천읍 수석2리</li>
+            <li>사남면 도동</li>
+            <li>사남면 병둔</li>
+            <li>사남면 유천</li>
+            <li>사남면 초전</li>
+            <li>사남면 한주빌라트</li>
+            <li>축동면 예동</li>
+            <li>축동면 신기</li>
+            <li>곤명면 원전</li>
+            <li>곤명면 은사</li>
+            <li>곤명면 장신</li>
+            <li>곤명면 조장</li>
+            <li>동서동 실안노모당</li>
+            <li>동서동 늑도</li>
+            <li>동서동 대방</li>
+            <li>동서금동 한주비치</li>
+            <li>동서금동 삼천포예미지</li>
+            <li>향촌동 모례</li>
+            <li>향촌동 서향</li>
+            <li>향촌동 봉전노모당</li>
+            <li>정동면 고읍</li>
+            <li>정동면 대곡</li>
+            <li>정동면 동계</li>
+            <li>정동면 수청</li>
+            <li>정동면 노천</li>
+            <li>용현면 온정</li>
+            <li>용현면 동강</li>
+            <li>용현면 평기</li>
+            <li>용현면 신송</li>
+            <li>곤양면 무고</li>
+            <li>곤양면 안도</li>
+            <li>곤양면 수동</li>
+            <li>곤양면 삼동</li>
+            <li>곤양면 상정</li>
+            <li>서포면 대포</li>
+            <li>서포면 다맥</li>
+            <li>서포면 중촌</li>
+            <li>선구동 새동네</li>
+            <li>선구동 통선</li>
+            <li>벌용동 중앙</li>
+            <li>벌용동 용강대경파미</li>
+            <li>벌용동 서희스타힐스</li>
+            <li>남양동 중촌</li>
+            <li>남양동 대례</li>
+            <li>남양동 송천</li>
+            <li>남양동 심포</li>
+            <li>51번째 경로당</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="info"></div>
+    <script>
+      function updateInfo() {
+        const infoElem = document.getElementById("info");
+        infoElem.innerHTML = `
+      <p>화면 너비(JS 기준): ${window.innerWidth}px</p>
+      <p>CSS 100vw 값: <span style="width: 100vw; display: inline-block; height: 5px; background: red;"></span></p>
+      <p>디바이스 픽셀 비율: ${window.devicePixelRatio}</p>
+      <p>실제 물리적 픽셀 수 (추정): ${window.innerWidth * window.devicePixelRatio}</p>
+    `;
+      }
+
+      window.addEventListener("resize", updateInfo);
+      updateInfo();
+    </script>
+  </body>
+</html>

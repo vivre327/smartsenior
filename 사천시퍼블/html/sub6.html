@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1920" />
+	<title>사천시 스마트경로당</title>
+	<link rel="stylesheet" href="../assets/css/sample.css" />
+	<link rel="stylesheet" href="../assets/css/style-ui.css" />
+	<!-- Chart.js Library -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+	<!-- Chart.js datalabels Library -->
+	<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0" defer></script>
+	<script src="https://unpkg.com/chart.js-plugin-labels-dv/dist/chartjs-plugin-labels.min.js" defer></script>
+	<script src="../assets/main.js" defer></script>
+</head>
+
+<body>
+	<div class="monitor">
+		<!-- Header Section -->
+		<header class="monitor-header">
+			<h1 class="monitor-logo"> <img src="../assets/images/icon/logo.svg" alt="사천시 로고"> </h1>
+			<h2 class="monitor-title">사천시 스마트경로당</h2>
+			<time class="date-time"><b>2025-02-20</b> 13:21:30</time>
+		</header>
+		<!-- Main Content -->
+		<main class="content">
+			<!-- Left Column -->
+			<div class="column left-col">
+				<!-- Service Usage Box -->
+				<article class="box usage-box">
+					<h3 class="box-title">서비스 이용현황</h3>
+					<ul class="usage-list">
+						<li class="usage-item">
+							<div class="icon-lg">
+								<svg class="icon">
+									<use xlink:href="../assets/images/icon/symbols.svg#home"></use>
+								</svg>
+							</div>
+							<span class="usage-value"><em class="label">경로당</em> <em>50</em>개소</span>
+						</li>
+						<li class="usage-item">
+							<div class="icon-lg">
+								<svg class="icon">
+									<use xlink:href="../assets/images/icon/symbols.svg#member"></use>
+								</svg>
+							</div>
+							<span class="usage-value"><em class="label">회원</em> <em>374</em>개소</span>
+						</li>
+					</ul>
+				</article>
+				<!-- IOT Status Box -->
+				<article class="box iot-box">
+					<h3 class="box-title">IOT 장비 현황</h3>
+					<ul class="iot-list">
+						<li class="iot-item">
+							<div class="iot-label">헬스케어 키오스크 50대</div>
+							<div class="chart-container">
+								<canvas id="healthcareChart"></canvas>
+							</div>
+							<div class="chart-legend">
+								<div class="legend-item"> <i class="dot dot-primary"></i> <span>정상 수신 49</span> </div>
+								<div class="legend-item"> <i class="dot dot-danger"></i> <span>정보 미수신 1</span> </div>
+							</div>
+						</li>
+						<li class="iot-item">
+							<div class="iot-label">종합정보 모니터 50대</div>
+							<div class="chart-container">
+								<canvas id="monitorChart"></canvas>
+							</div>
+							<div class="chart-legend">
+								<div class="legend-item"> <i class="dot dot-primary"></i> <span>정상 수신 48</span> </div>
+								<div class="legend-item"> <i class="dot dot-danger"></i> <span>정보 미수신 2</span> </div>
+							</div>
+						</li>
+					</ul>
+
+					<!-- Medical Devices Status List -->
+					<ul class="device-list">
+						<li class="device-item">
+							<div class="icon-lg">
+								<svg class="icon">
+									<use xlink:href="../assets/images/icon/symbols.svg#pressure"></use>
+								</svg>
+							</div>
+							<em class="device-name">혈압계</em>
+							<div class="device-status">
+								<span class="count"><em>50</em>대</span>
+								<div class="status">
+									<i class="dot dot-primary"></i> <span class="status-text">사용 <em>50</em></span>
+								</div>
+								<div class="status">
+									<i class="dot dot-danger"></i> <span class="status-text">미사용 <em>0</em></span>
+								</div>
+							</div>
+						</li>
+						<li class="device-item">
+							<div class="icon-lg">
+								<svg class="icon">
+									<use xlink:href="../assets/images/icon/symbols.svg#glucose"></use>
+								</svg>
+							</div>
+							<em class="device-name">혈당계</em>
+							<div class="device-status">
+								<span class="count"><em>50</em>대</span>
+								<div class="status">
+									<i class="dot dot-primary"></i> <span class="status-text">사용 <em>50</em></span>
+								</div>
+								<div class="status">
+									<i class="dot dot-danger"></i> <span class="status-text">미사용 <em>0</em></span>
+								</div>
+							</div>
+						</li>
+						<li class="device-item">
+							<div class="icon-lg">
+								<svg class="icon">
+									<use xlink:href="../assets/images/icon/symbols.svg#oximeter"></use>
+								</svg>
+							</div>
+							<em class="device-name">산소포화도측정기</em>
+							<div class="device-status">
+								<span class="count"><em>50</em>대</span>
+								<div class="status">
+									<i class="dot dot-primary"></i> <span class="status-text">사용 <em>50</em></span>
+								</div>
+								<div class="status">
+									<i class="dot dot-danger"></i> <span class="status-text">미사용 <em>0</em></span>
+								</div>
+							</div>
+						</li>
+						<li class="device-item">
+							<div class="icon-lg">
+								<svg class="icon">
+									<use xlink:href="../assets/images/icon/symbols.svg#autonomic"></use>
+								</svg>
+							</div>
+							<em class="device-name">자율신경검사기</em>
+							<div class="device-status">
+								<span class="count"><em>50</em>대</span>
+								<div class="status">
+									<i class="dot dot-primary"></i> <span class="status-text">사용 <em>50</em></span>
+								</div>
+								<div class="status">
+									<i class="dot dot-danger"></i> <span class="status-text">미사용 <em>0</em></span>
+								</div>
+							</div>
+						</li>
+						<li class="device-item">
+							<div class="icon-lg">
+								<svg class="icon">
+									<use xlink:href="../assets/images/icon/symbols.svg#strength"></use>
+								</svg>
+							</div>
+							<em class="device-name">악력기</em>
+							<div class="device-status">
+								<span class="count"><em>50</em>대</span>
+								<div class="status">
+									<i class="dot dot-primary"></i> <span class="status-text">사용 <em>50</em></span>
+								</div>
+								<div class="status">
+									<i class="dot dot-danger"></i> <span class="status-text">미사용 <em>0</em></span>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+				</article>
+
+				<!-- User Statistics -->
+				<article class="box user-box">
+					<h3 class="box-title">이용자 성별, 연령대별 분포</h3>
+					<ul class="user-list">
+						<li class="user-item">
+							<h4 class="user-title">성별</h4>
+							<div class="chart-wrap">
+								<div class="chart-container">
+									<canvas id="genderChart"></canvas>
+									<div class="total-label">
+										<div class="total-text">Total</div>
+										<div class="total-value">375명</div>
+									</div>
+								</div>
+								<div class="chart-label male-label" id="maleLabel">34.7</div>
+								<div class="chart-label female-label" id="femaleLabel">65.3</div>
+							</div>
+							<div class="chart-legend">
+								<div class="legend-item"> <i class="dot dot-male"></i> <span>남 130명</span> </div>
+								<div class="legend-item"> <i class="dot dot-female"></i> <span>여 245명</span> </div>
+							</div>
+						</li>
+						<li class="user-item flex-1">
+							<h4 class="user-title">연령대별</h4>
+							<table class="age-table">
+								<colgroup>
+										<col style="width: 25%">
+										<col style="width: 50%">
+										<col style="width: 25%">
+								</colgroup>
+								<tr>
+										<td class="age-label">60대</td>
+										<td class="progress-container">
+												<progress class="age-progress" value="16" max="100"></progress>
+										</td>
+										<td class="age-value">60명/16%</td>
+								</tr>
+								<tr>
+										<td class="age-label">70대</td>
+										<td class="progress-container">
+												<progress class="age-progress" value="48" max="100"></progress>
+										</td>
+										<td class="age-value">180명/48%</td>
+								</tr>
+								<tr>
+										<td class="age-label">80대</td>
+										<td class="progress-container">
+												<progress class="age-progress" value="33.6" max="100"></progress>
+										</td>
+										<td class="age-value">126명/33.6%</td>
+								</tr>
+								<tr>
+										<td class="age-label">90대 이상</td>
+										<td class="progress-container">
+												<progress class="age-progress" value="2.4" max="100"></progress>
+										</td>
+										<td class="age-value">9명/2.4%</td>
+								</tr>
+						</table>
+						</li>
+					</ul>
+				</article>
+			</div>
+			<!-- Center Column (Map) -->
+			<div class="column center-col">
+				<div class="map-area">
+					<!-- Map will be inserted by the development team -->
+					<div class="map-placeholder">
+						<!-- Placeholder for map -->
+					</div>
+				</div>
+			</div>
+			<!-- Right Column -->
+			<div class="column right-col">
+				<!-- Weekly Usage -->
+				<div class="box weekly-box">
+					<h3 class="box-title">주,월간 이용건수</h3>
+					<ul class="weekly-list">
+						<li class="weekly-item" style="--current: 328; --total: 1493;">
+							<span class="label">이번 주</span>
+							<div class="bar">
+							</div>
+							<span class="value">328</span>
+						</li>
+						<li class="weekly-item" style="--current: 1493; --total: 1493;">
+							<span class="label">이번 달</span>
+							<div class="bar">
+							</div>
+							<span class="value">1,493</span>
+						</li>
+					</ul>
+				</div>
+				<!-- Path Usage Ranking -->
+				<div class="box ranking-box">
+					<h3 class="box-title">경로당별 이용 순위 <small>(2025년 2월)</small></h3>
+					<ul class="ranking-list">
+						<li class="ranking-item" style="--current: 145; --total: 145;">
+							<div class="icon-md">
+								<svg class="icon">
+									<use xlink:href="../assets/images/icon/symbols.svg#medal-1st"></use>
+								</svg>
+							</div>
+							<div class="bar-container">
+								<div class="bar bar-1">
+									<span class="label">축동면 예동 경로당</span>
+								</div>
+							</div>
+							<span class="value">145건</span>
+						</li>
+						<li class="ranking-item" style="--current: 132; --total: 145;">
+							<div class="icon-md">
+								<svg class="icon">
+									<use xlink:href="../assets/images/icon/symbols.svg#medal-2nd"></use>
+								</svg>
+							</div>
+							<div class="bar-container">
+								<span class="label">곤양면 수동 경로당</span>
+								<div class="bar bar-2"></div>
+							</div>
+							<span class="value">132건</span>
+						</li>
+						<li class="ranking-item" style="--current: 110; --total: 145;">
+							<div class="icon-md">
+								<svg class="icon">
+									<use xlink:href="../assets/images/icon/symbols.svg#medal-3rd"></use>
+								</svg>
+							</div>
+							<div class="bar-container">
+								<span class="label">서포면 중촌 경로당</span>
+								<div class="bar bar-3" ></div>
+							</div>
+							<span class="value">110건</span>
+						</li>
+						<li class="ranking-item" style="--current: 96; --total: 145;">
+							<div class="icon-md">
+								<svg class="icon">
+									<use xlink:href="../assets/images/icon/symbols.svg#medal-4th"></use>
+								</svg>
+							</div>
+							<div class="bar-container">
+								<span class="label">사남면 도동 경로당</span>
+								<div class="bar"></div>
+							</div>
+							<span class="value">88건</span>
+						</li>
+						<li class="ranking-item" style="--current: 88; --total: 145;">
+							<div class="icon-md">
+								<svg class="icon">
+									<use xlink:href="../assets/images/icon/symbols.svg#medal-5th"></use>
+								</svg>
+							</div>
+							<div class="bar-container">
+								<span class="label">별용동 서희스타힐스 경로당</span>
+								<div class="bar bar-5"></div>
+							</div>
+							<span class="value">84건</span>
+						</li>
+					</ul>
+				</div>
+				<!-- Health Measurement Usage -->
+				<div class="box health-box">
+					<h3 class="box-title">건강측정 항목별 이용건수 <small>(2025년 2월)</small></h3>
+					<ul class="health-list">
+						<li class="health-item" style="--current: 43; --total: 43;">
+							<span class="label">혈압</span>
+							<div class="bar pink">
+							</div>
+							<span class="value">43</span>
+						</li>
+						<li class="health-item" style="--current: 23; --total: 43;">
+							<span class="label">혈압</span>
+							<div class="bar orange">
+							</div>
+							<span class="value">23</span>
+						</li>
+						<li class="health-item" style="--current: 26; --total: 43;">
+							<span class="label">산소포화도</span>
+							<div class="bar purple">
+							</div>
+							<span class="value">26</span>
+						</li>
+						<li class="health-item" style="--current: 15; --total: 43;">
+							<span class="label">자율신경</span>
+							<div class="bar blue">
+							</div>
+							<span class="value">15</span>
+						</li>
+						<li class="health-item" style="--current: 31; --total: 43;">
+							<span class="label">악력</span>
+							<div class="bar green">
+							</div>
+							<span class="value">31</span>
+						</li>
+					</ul>
+				</div>
+				<!-- Emergency Data -->
+				<div class="box alert-box">
+					<h3 class="box-title">비정상 측정 데이터</h3>
+					<ul class="alert-list">
+						<li class="alert-item">
+							<div class="icon-sm">
+								<svg class="icon">
+									<use xlink:href="../assets/images/icon/symbols.svg#alarm"></use>
+								</svg>
+							</div>
+							<time class="alert-date">2025.02.06 15:27</time>
+							<p class="alert-location">곤양면 장전 경로당</p>
+							<span class="alert-name">홍길동</span>
+							<span class="alert-status status-danger">고혈압</span>
+						</li>
+						<li class="alert-item">
+							<div class="icon-sm">
+								<svg class="icon">
+									<use xlink:href="../assets/images/icon/symbols.svg#alarm"></use>
+								</svg>
+							</div>
+							<time class="alert-date">2025.02.06 10:54</time>
+							<p class="alert-location">동서동종 합천마을 경로당</p>
+							<span class="alert-name">김길순</span>
+							<span class="alert-status status-danger">고혈당</span>
+						</li>
+						<li class="alert-item">
+							<div class="icon-sm">
+								<svg class="icon">
+									<use xlink:href="../assets/images/icon/symbols.svg#alarm"></use>
+								</svg>
+							</div>
+							<time class="alert-date">2025.02.06 16:02</time>
+							<p class="alert-location">사천읍 정의 1리 경로당</p>
+							<span class="alert-name">이미자</span>
+							<span class="alert-status status-danger">고혈압</span>
+						</li>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<!-- JavaScript for Charts -->
+	<script src="scripts.js"></script>
+</body>
+
+</html>

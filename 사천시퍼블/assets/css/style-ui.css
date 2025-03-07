@@ -234,8 +234,7 @@ body {
   height: 72px;
   border-radius: 60px;
   border: 1px solid #ddd;
-  background: #fff url("../images/icon/back.svg") center left 20px / 48px
-    no-repeat;
+  background: #fff url("../images/icon/back.svg") center left 20px / 48px no-repeat;
   padding-left: 32px;
 }
 .btn_prev_page span {
@@ -354,8 +353,8 @@ body {
   height: 267px;
   border-radius: 60px;
   background: rgb(88, 94, 191);
-  background: linear-gradient(131.2deg, #B873F3 5.04%, #585EBF 100%);
-  
+  background: linear-gradient(131.2deg, #b873f3 5.04%, #585ebf 100%);
+
   overflow: hidden;
   border: 0;
   padding: 0;
@@ -917,4 +916,1133 @@ figure.fig_05 {
 .option_btn.selected {
   background-color: #5672ed;
   color: #fff;
+}
+
+/*----------------------
+  Dashboard Layout
+----------------------*/
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+.dashboard .header,
+.dashboard .header_inner {
+  height: 80px;
+}
+.dashboard .header_title {
+  font-size: 32px;
+}
+.dashboard .container {
+  display: flex;
+  flex: 1;
+  gap: 30px;
+  height: 100%;
+  padding: 30px;
+}
+.equipment_area,
+.map_area,
+.attendees_area {
+  flex: 1;
+  border: 2px solid #ddd;
+  border-radius: 24px;
+}
+
+/* 사이드 패널 */
+.panel {
+  width: 440px;
+  max-width: 440px;
+  height: 940px;
+  padding: 22px 18px;
+  position: relative;
+}
+.section_title {
+  padding: 0 10px;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+  background-color: #fff;
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 지도 */
+.map_area {
+  width: 880px;
+  height: 834px;
+  min-height: 0;
+  overflow: hidden;
+  position: relative;
+}
+.map_area.h100 {
+  height: 940px;
+}
+.sample_img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* 장비상태 */
+.equipment_area {
+  padding-bottom: 0;
+}
+.box_grid {
+  column-count: 2;
+  column-gap: 16px;
+}
+.box_item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 22px;
+  padding: 17px 0 8px;
+  border-radius: 16px;
+  border: 1px solid #dddddd;
+  position: relative;
+}
+.box_tit {
+  padding: 0 10px;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+  color: #111;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+}
+.summary_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 16px 0;
+  border-radius: 999px;
+  background: #f1f5fc;
+}
+.summary_list {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex: 1;
+}
+.summary_list li {
+  display: flex;
+  gap: 10px;
+}
+.summary_name {
+  display: block;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20.43px;
+  text-align: left;
+}
+.summary_status {
+  display: flex;
+  gap: 10px;
+}
+.summary_status .status_dot {
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1;
+  text-align: left;
+  white-space: nowrap;
+}
+.row_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.row_item {
+  display: flex;
+  gap: 10px;
+}
+.row_name {
+  display: block;
+  width: 80px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 14.76px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  color: #111;
+}
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.clip {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
+.row_status {
+  display: flex;
+  gap: 16px;
+}
+.status_dot {
+  display: flex;
+  align-items: center;
+}
+.status_dot::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+}
+.status_dot.active {
+  color: #6fca4a;
+}
+.status_dot.active::before {
+  background-color: #6fca4a;
+}
+.status_dot.error {
+  color: #e72d2d;
+}
+.status_dot.error::before {
+  background-color: #e72d2d;
+}
+.guide_txt {
+  width: 100%;
+  margin-top: -4px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18.16px;
+  text-align: center;
+  color: #555;
+}
+
+/* 화상회의 참석 경로당 */
+.dot_list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  height: calc(100% - 120px);
+  padding: 0 20px;
+  overflow: hidden;
+}
+.dot_list li {
+  display: inline-block;
+  align-items: center;
+  /* width: 168px; */
+  width: calc(50% - 12px);
+  padding-left: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #111;
+  position: relative;
+}
+.dot_list li::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  line-height: 1;
+  border-radius: 999px;
+  background-color: #999;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* --------------------------------------------------------- */
+/*                       통신실 현황판 2025                    */
+/* --------------------------------------------------------- */
+
+/* Base Variables - 반응형 스케일링 적용 */
+:root {
+  /* 기준 해상도 */
+  --base-width: 1920;
+
+  /* Colors */
+  --color-bg-light-blue: #e6eff7;
+  --color-white: #fff;
+  --color-black: #111;
+  --color-gray-100: #f1f1f1;
+  --color-gray-200: #eeeeee;
+  --color-gray-300: #dddddd;
+  --color-gray-400: #d5d5d5;
+  --color-gray-500: #888;
+  --color-gray-600: #666;
+  --color-gray-700: #555;
+  --color-gray-800: #444;
+  --color-primary: #0075ff;
+  --color-danger: #f53c2b;
+  --color-warning: #f5892b;
+  --color-pink: #e04ec7;
+
+  /* Spacing - vw 기반 반응형 */
+  --space-3: calc(3 / var(--base-width) * 100vw);
+  --space-4: calc(4 / var(--base-width) * 100vw);
+  --space-6: calc(6 / var(--base-width) * 100vw);
+  --space-8: calc(8 / var(--base-width) * 100vw);
+  --space-10: calc(10 / var(--base-width) * 100vw);
+  --space-12: calc(12 / var(--base-width) * 100vw);
+  --space-15: calc(15 / var(--base-width) * 100vw);
+  --space-16: calc(16 / var(--base-width) * 100vw);
+  --space-19: calc(19 / var(--base-width) * 100vw);
+  --space-20: calc(20 / var(--base-width) * 100vw);
+  --space-22: calc(22 / var(--base-width) * 100vw);
+  --space-24: calc(24 / var(--base-width) * 100vw);
+  --space-26: calc(26 / var(--base-width) * 100vw);
+  --space-30: calc(30 / var(--base-width) * 100vw);
+  --space-32: calc(32 / var(--base-width) * 100vw);
+  --space-34: calc(34 / var(--base-width) * 100vw);
+  --space-36: calc(36 / var(--base-width) * 100vw);
+  --space-38: calc(38 / var(--base-width) * 100vw);
+  --space-40: calc(40 / var(--base-width) * 100vw);
+
+  /* Font Sizes */
+  --font-10: calc(10 / var(--base-width) * 100vw);
+  --font-12: calc(12 / var(--base-width) * 100vw);
+  --font-13: calc(13 / var(--base-width) * 100vw);
+  --font-14: calc(14 / var(--base-width) * 100vw);
+  --font-15: calc(15 / var(--base-width) * 100vw);
+  --font-16: calc(16 / var(--base-width) * 100vw);
+  --font-18: calc(18 / var(--base-width) * 100vw);
+  --font-20: calc(20 / var(--base-width) * 100vw);
+  --font-24: calc(24 / var(--base-width) * 100vw);
+  --font-26: calc(26 / var(--base-width) * 100vw);
+  --font-28: calc(28 / var(--base-width) * 100vw);
+  --font-32: calc(32 / var(--base-width) * 100vw);
+
+  /* Border Radius */
+  --radius-4: calc(4 / var(--base-width) * 100vw);
+  --radius-8: calc(8 / var(--base-width) * 100vw);
+  --radius-pill: 9999px;
+
+  /* Component Sizes */
+  --icon-sm: calc(24 / var(--base-width) * 100vw);
+  --icon-md: calc(28 / var(--base-width) * 100vw);
+  --icon-lg: calc(32 / var(--base-width) * 100vw);
+  --chart-size: calc(100 / var(--base-width) * 100vw);
+  --header-height: calc(120 / var(--base-width) * 100vw);
+  --logo-height: calc(64 / var(--base-width) * 100vw);
+  --title-height: calc(68 / var(--base-width) * 100vw);
+  --dot-size: calc(6 / var(--base-width) * 100vw);
+  --progress-height: calc(8 / var(--base-width) * 100vw);
+}
+
+/* 1366px 미만에서 1920 디자인 고정값 적용 */
+@media (max-width: 1365px) {
+  :root {
+    --space-3: 3px;
+    --space-4: 4px;
+    --space-6: 6px;
+    --space-8: 8px;
+    --space-10: 10px;
+    --space-12: 12px;
+    --space-15: 15px;
+    --space-16: 16px;
+    --space-19: 19px;
+    --space-20: 20px;
+    --space-22: 22px;
+    --space-24: 24px;
+    --space-26: 26px;
+    --space-30: 30px;
+    --space-32: 32px;
+    --space-34: 34px;
+    --space-36: 36px;
+    --space-38: 38px;
+    --space-40: 40px;
+
+    --font-10: 10px;
+    --font-12: 12px;
+    --font-13: 13px;
+    --font-14: 14px;
+    --font-15: 15px;
+    --font-16: 16px;
+    --font-18: 18px;
+    --font-20: 20px;
+    --font-24: 24px;
+    --font-26: 26px;
+    --font-28: 28px;
+    --font-32: 32px;
+
+    --radius-4: 4px;
+    --radius-8: 8px;
+
+    --icon-sm: 24px;
+    --icon-md: 28px;
+    --icon-lg: 32px;
+    --chart-size: 100px;
+    --header-height: 120px;
+    --logo-height: 64px;
+    --title-height: 68px;
+    --dot-size: 6px;
+    --progress-height: 8px;
+  }
+
+  .monitor {
+    min-width: 1366px;
+    overflow-x: auto;
+  }
+}
+
+/* 3840px 초과에서 3840 디자인 고정값 적용 (1920px의 2배) */
+@media screen and (min-width: 3840px) {
+  :root {
+    --space-3: 6px;
+    --space-4: 8px;
+    --space-6: 12px;
+    --space-8: 16px;
+    --space-10: 20px;
+    --space-12: 24px;
+    --space-15: 30px;
+    --space-16: 32px;
+    --space-19: 38px;
+    --space-20: 40px;
+    --space-22: 44px;
+    --space-24: 48px;
+    --space-26: 52px;
+    --space-30: 60px;
+    --space-32: 64px;
+    --space-34: 68px;
+    --space-36: 72px;
+    --space-38: 76px;
+    --space-40: 80px;
+
+    --font-10: 20px;
+    --font-12: 24px;
+    --font-13: 26px;
+    --font-14: 28px;
+    --font-15: 30px;
+    --font-16: 32px;
+    --font-18: 36px;
+    --font-20: 40px;
+    --font-24: 48px;
+    --font-26: 52px;
+    --font-28: 56px;
+    --font-32: 64px;
+
+    --radius-4: 8px;
+    --radius-8: 16px;
+
+    --icon-sm: 48px;
+    --icon-md: 56px;
+    --icon-lg: 64px;
+    --chart-size: 200px;
+    --header-height: 240px;
+    --logo-height: 128px;
+    --title-height: 136px;
+    --dot-size: 12px;
+    --progress-height: 16px;
+  }
+}
+
+/* Reset and Base Styles */
+.icon {
+  width: 100%;
+  height: 100%;
+}
+
+.icon-sm {
+  width: var(--icon-sm);
+  height: var(--icon-sm);
+}
+
+.icon-md {
+  width: var(--icon-md);
+  height: var(--icon-md);
+}
+
+.icon-lg {
+  width: var(--icon-lg);
+  height: var(--icon-lg);
+}
+
+/* Dashboard Layout */
+body:has(.monitor) {
+  overflow-x: hidden;
+}
+
+.monitor {
+  width: 100%;
+  min-width: 1366px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: var(--color-bg-light-blue);
+  color: var(--color-black);
+}
+
+.monitor em {
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Header Styles */
+.monitor-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-20);
+  min-height: var(--header-height);
+  padding-inline: var(--space-40);
+}
+
+.monitor-logo {
+  width: 25%;
+  height: var(--logo-height);
+  text-align: center;
+}
+
+.monitor-logo img {
+  height: 100%;
+}
+
+.monitor-title {
+  flex-grow: 1;
+  width: 50%;
+  height: var(--title-height);
+  line-height: var(--title-height);
+  font-size: var(--font-32);
+  font-weight: 800;
+  text-align: center;
+  background-image: url("../images/pic/bg_title.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: var(--color-black);
+}
+
+.date-time {
+  display: block;
+  width: 25%;
+  text-align: center;
+  font-size: var(--font-26);
+  font-weight: 700;
+}
+
+.date-time b {
+  font-size: var(--font-28);
+  font-weight: 800;
+}
+
+/* Main Content Layout */
+.content {
+  display: flex;
+  flex: 1;
+  padding-inline: var(--space-40);
+  padding-bottom: var(--space-34);
+  gap: var(--space-20);
+}
+
+/* Column Layouts */
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  /* overflow-y: auto; */
+}
+
+.left-col,
+.right-col {
+  width: 25%;
+  justify-content: space-between;
+}
+
+.center-col {
+  width: 50%;
+  position: relative;
+}
+
+/* Scrollbar Styling */
+.column::-webkit-scrollbar {
+  width: var(--space-8);
+}
+
+.column::-webkit-scrollbar-track {
+  background: var(--color-gray-100);
+}
+
+.column::-webkit-scrollbar-thumb {
+  background: var(--color-gray-500);
+  border-radius: var(--radius-4);
+}
+
+.column::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray-700);
+}
+
+/* Box Component Styles */
+.box {
+  background-color: var(--color-white);
+  border-radius: var(--radius-8);
+  border: 1px solid var(--color-gray-300);
+}
+
+.box-title {
+  padding: var(--space-16);
+  border-bottom: 1px solid var(--color-gray-300);
+  font-size: var(--font-18);
+  font-weight: 800;
+  text-align: center;
+  line-height: 1;
+}
+
+.box-title small {
+  font-size: var(--font-14);
+  color: #111111cc;
+}
+
+/* Service Usage Section */
+.usage-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: var(--space-20);
+  gap: var(--space-32);
+}
+
+.usage-item {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-10);
+}
+
+.usage-value {
+  display: flex;
+  align-items: center;
+  margin-right: var(--space-8);
+  font-size: var(--font-16);
+}
+
+.usage-value .label {
+  margin-right: var(--space-8);
+}
+
+.usage-value em {
+  font-weight: 800;
+}
+
+/* IOT Status Section */
+.iot-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--space-30);
+  padding-inline: var(--space-36);
+}
+
+.iot-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iot-item .chart-container {
+  width: calc(var(--chart-size) + var(--space-15));
+  height: calc(var(--chart-size) + var(--space-15));
+  position: relative;
+}
+
+.iot-label {
+  font-size: var(--font-15);
+  font-weight: 700;
+  margin-bottom: var(--space-10);
+}
+
+.chart-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: calc(var(--chart-size) + 10px);
+  height: calc(var(--chart-size) + 10px);
+}
+
+.chart-container {
+  width: var(--chart-size);
+  height: var(--chart-size);
+  position: relative;
+}
+
+.chart-label {
+  position: absolute;
+  width: var(--space-32);
+  height: var(--space-32);
+  background: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: var(--space-32);
+  font-weight: 800;
+  color: #444;
+  font-size: var(--font-10);
+  box-shadow: 0px 4px 10px 0px #0000001a;
+}
+
+.total-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.total-text {
+  margin-bottom: var(--space-3);
+  font-size: var(--font-10);
+  font-weight: 700;
+  color: rgb(17 17 17 / 80%);
+}
+
+.total-value {
+  font-size: var(--font-15);
+  font-weight: 800;
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-10);
+  margin-top: var(--space-10);
+}
+
+.chart-legend span {
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-12);
+  color: var(--color-gray-600);
+  font-weight: 700;
+}
+
+.dot {
+  width: var(--dot-size);
+  height: var(--dot-size);
+  border-radius: 50%;
+  margin-right: var(--space-4);
+}
+
+.dot-primary {
+  background-color: var(--color-primary);
+}
+
+.dot-danger {
+  background-color: var(--color-warning);
+}
+
+.dot-male {
+  background-color: var(--color-primary);
+}
+
+.dot-female {
+  background-color: var(--color-pink);
+}
+
+.legend-text {
+  font-size: var(--font-12);
+}
+
+/* Device List Section */
+.device-list {
+  display: flex;
+  flex-direction: column;
+  margin-block: var(--space-22) var(--space-8);
+  padding-inline: var(--space-36);
+}
+
+.device-item {
+  display: flex;
+  align-items: center;
+  padding-block: var(--space-8);
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.device-item:last-child {
+  border-bottom: 0;
+}
+
+.device-name {
+  font-size: var(--font-15);
+  font-weight: 800;
+  flex: 1;
+  margin-left: var(--space-8);
+}
+
+.device-status {
+  display: flex;
+  align-items: center;
+  gap: var(--space-20);
+  font-size: var(--font-14);
+  line-height: 1;
+}
+
+.device-status .count {
+  letter-spacing: 0.5px;
+}
+
+.device-status .status {
+  display: flex;
+  align-items: center;
+}
+
+.device-status .dot {
+  margin-right: var(--space-6);
+}
+
+/* User Stats Section */
+.user-list {
+  display: flex;
+  gap: var(--space-20);
+  padding: var(--space-20) var(--space-12);
+  text-align: left;
+}
+
+.user-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.user-title {
+  width: 100%;
+  font-size: var(--font-14);
+  font-weight: 800;
+  margin-bottom: var(--space-10);
+}
+
+.user-item:has(.total-label) .user-title {
+  margin-bottom: var(--space-8);
+}
+
+.user-item:has(.total-label) .chart-legend {
+  margin-top: var(--space-8);
+}
+
+.age-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.age-table td {
+  padding: var(--space-8) var(--space-4);
+  vertical-align: middle;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.age-label {
+  font-size: var(--font-13);
+  font-weight: 800;
+  color: var(--color-gray-800);
+}
+
+.age-value {
+  font-size: var(--font-12);
+  line-height: 1;
+  font-weight: 800;
+  color: var(--color-black);
+  white-space: nowrap;
+  text-align: right;
+}
+
+.progress-container {
+  position: relative;
+}
+
+/* 기본 progress 스타일 재정의 */
+.age-progress {
+  display: block;
+  width: 100%;
+  height: var(--progress-height);
+  border: none;
+  background-color: var(--color-gray-400);
+  border-radius: var(--radius-8);
+}
+
+/* Firefox에서의 progress 스타일 */
+.age-progress::-moz-progress-bar {
+  background-color: var(--color-primary);
+  border-radius: var(--radius-8);
+}
+
+/* Chrome과 Safari에서의 progress 스타일 */
+.age-progress::-webkit-progress-value {
+  background-color: var(--color-primary);
+  border-radius: var(--radius-8);
+}
+
+.age-progress::-webkit-progress-bar {
+  background-color: var(--color-gray-400);
+  border-radius: var(--radius-8);
+}
+
+/* Map Area */
+.map-area {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: var(--color-white);
+  background-image: url("../images/pic/panel_map_sample.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-8);
+  overflow: hidden;
+  border: 1px solid #dddddd;
+}
+.map-placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+/* Weekly Stats */
+.weekly-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  max-width: 100%;
+  padding-inline: var(--space-40);
+  padding-block: var(--space-20);
+}
+
+.weekly-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.weekly-item .label {
+  flex: 0 0 70px;
+  font-weight: 800;
+  font-size: var(--font-14);
+  line-height: 1;
+  color: #111;
+  white-space: nowrap;
+}
+
+.weekly-item .bar {
+  background-color: #0066ff;
+  height: var(--space-8);
+  border-radius: var(--space-8);
+  width: calc(var(--current) / var(--total) * 100%);
+}
+
+.weekly-item .value {
+  font-weight: 800;
+  font-size: var(--font-14);
+  color: #111;
+  white-space: nowrap;
+}
+
+/* Ranking Section */
+.ranking-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  padding-block: var(--space-20);
+  padding-inline: var(--space-40);
+}
+
+.ranking-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+.ranking-item .bar-container {
+  position: relative;
+  flex: 1;
+}
+
+.ranking-item .label {
+  font-size: var(--font-13);
+  font-weight: 800;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 0 3px rgb(0, 102, 255, 0.9);
+  position: absolute;
+  left: var(--space-8);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.ranking-item .bar {
+  height: var(--space-19);
+  background-color: #0066ff;
+  border-radius: var(--space-19);
+  width: calc(var(--current) / var(--total) * 100%);
+}
+
+.ranking-item .bar.bar-1 {
+  background-color: #ffbb0d;
+}
+
+.ranking-item:has(.bar-1) .label {
+  text-shadow: 0 0 3px rgb(255, 187, 13, 0.9);
+}
+
+.ranking-item .bar.bar-2 {
+  background-color: #81a5b0;
+}
+
+.ranking-item:has(.bar-2) .label {
+  text-shadow: 0 0 3px rgb(129, 165, 176, 0.9);
+}
+
+.ranking-item .bar.bar-3 {
+  background-color: #c38144;
+}
+
+.ranking-item:has(.bar-3) .label {
+  text-shadow: 0 0 3px rgb(195, 129, 68, 0.9);
+}
+
+.ranking-item .value {
+  flex: 0 0 calc(50/1920 * 100vw);
+  font-size: var(--font-14);
+  font-weight: 800;
+  color: #444444;
+  text-align: right;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* Health Measurement Section */
+.health-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  max-width: 100%;
+  padding-inline: var(--space-40);
+  padding-block: var(--space-20);
+}
+
+.health-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.health-item .label {
+  flex: 0 0 calc(70/1920 * 100vw);
+  font-weight: 800;
+  font-size: var(--font-15);
+  color: #111;
+  white-space: nowrap;
+}
+
+.health-item .bar {
+  height: var(--space-8);
+  border-radius: var(--space-8);
+  width: calc(var(--current) / var(--total) * 100%);
+}
+
+.health-item .value {
+  flex-shrink: 0;
+  text-align: center;
+  line-height: var(--space-26);
+  width: var(--space-24);
+  height: var(--space-24);
+  background-color: var(--color-primary);
+  border-radius: var(--radius-pill);
+  font-weight: 800;
+  font-size: var(--font-13);
+  color: #fff;
+  white-space: nowrap;
+}
+
+.pink {
+  background-color: #ff8ce0;
+}
+
+.orange {
+  background-color: #ffae52;
+}
+
+.purple {
+  background-color: #c99cff;
+}
+
+.blue {
+  background-color: #64a2f8;
+}
+
+.green {
+  background-color: #67e0e8;
+}
+
+/* Alert Section */
+.alert-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  padding: var(--space-20);
+}
+
+.alert-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.alert-date {
+  font-size: var(--font-12);
+  font-weight: 700;
+  color: #444;
+  white-space: nowrap;
+}
+
+.alert-location {
+  font-size: var(--font-13);
+  font-weight: 700;
+  color: #444;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.alert-name {
+  width: calc(50 / var(--base-width) * 100vw);
+  font-size: var(--font-13);
+  font-weight: 800;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.alert-status {
+  width: calc(36 / var(--base-width) * 100vw);
+  font-size: var(--font-13);
+  font-weight: 800;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.status-danger {
+  color: var(--color-danger);
 }

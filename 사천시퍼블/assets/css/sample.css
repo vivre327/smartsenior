@@ -1,0 +1,42 @@
+/* -------------------------------------------------------------------------- */
+/*                                통신실 현황판 2025                            */
+/* -------------------------------------------------------------------------- */
+/* Reset and Base Styles */
+
+/* 반응형 디자인 (4K 및 일반 해상도) */
+@media screen and (min-width: 3840px) {
+  .box {
+    padding: calc(var(--box-padding) * 1.5);
+  }
+
+  .chart-container {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+/* 작은 화면에 대한 추가 반응형 처리 */
+@media screen and (max-width: 1600px) {
+  .content {
+    padding: var(--spacing-md);
+    gap: var(--spacing-md);
+  }
+
+  .left-col,
+  .right-col {
+    width: 28%;
+  }
+
+  .center-col {
+    width: 44%;
+  }
+
+  .health-label,
+  .weekly-label {
+    font-size: 0.75rem;
+  }
+
+  .path-name {
+    font-size: 0.75rem;
+  }
+}
